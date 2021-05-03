@@ -4,8 +4,8 @@ This repository contains the source code of ISAAC Ontology Network.
 
 ### What is ISAAC?
 
-ISAAC is a modular ontology for Image Schema Analysis And Comparison, building a new top image schematic roles level on frames represented and formalized in Framester.
-Its design applies the COntPare methodology for epistemic ontology comparison at the domain of image schema theories.
+ISAAC is a modular ontology for Image Schema Analysis And Comparison, building a new top image schematic roles level on frames represented and formalized in [Framester](https://github.com/framester/Framester).
+Its design applies the [COntPare]() methodology for epistemic ontology comparison at the domain of image schema theories.
 Furthermore, ISAAC is supplied with a practical application, which extends the Framester schema, operationalising image schemas in knowledge graphs extracted from text.
 
 
