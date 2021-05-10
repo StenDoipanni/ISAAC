@@ -66,12 +66,14 @@ The module obtained from the reorganization of [1](http://zope.psyergo.uni-wuerz
 
 
 **ISFrame**
+
 The mappings from ISCAT repository to FrameNet and MetaNet source and target domain frames, declaring also the spatial primitive / image schema gestaltically structuring the metaphor.
 
 
 **Exuviae**
 
 Exuviae (In biology, exuviae are the remains of an exoskeleton and related structures that are left after ecdyso-zoans - including insects, crustaceans and arachnids - have moulted.” [wiki here](https://en.wikipedia.org/wiki/Exuviae) ) is the module used to explain the epistemic choices done while comparing elements of the same or different theories.
+
 Some of the main classes:
 
 - _ex:TheoreticalFragment_: a TheoreticalFragment is a collection of related ontology elements from one or multiple theories. The fragment derives from comparing different theories by applying epistemological choices made based on some criterion, leading to a selection result;
@@ -89,6 +91,11 @@ Some of the main classes:
 The Exuviae epistemical exoskeleton applied to image schemas theories, in their ontological version, aligned foundationally to DOLCE+DnS and Framester.
 
 
-**Integrated Theory**
+**ISAAC**
 
+The integrated theory, result of the epistemic choices explained in ISExuviae, taking elements from previous theories, grounding them formally and aligning them to DOLCE foundational ontology, introducing the Image Schema Activation with more than five thousends Framester roles (from WordNet, VerbNet, Propbank and FrameNet) activating the corresponding spatial primitive / image schema.
+
+**ISclosure**
+
+The closure module importing all the previous module of the ISAAC ontology network.
 
