@@ -1,0 +1,1386 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#"
+     xml:base="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl"
+     xmlns:d0="http://www.ontologydesignpatterns.org/ont/d0.owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:exu="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:opla="http://ontologydesignpatterns.org/opla#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:isexu="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:schema="http://schema.org/"
+     xmlns:exuviae="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#"
+     xmlns:metanet="https://w3id.org/framester/metanet/frames/"
+     xmlns:hedblomis="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#"
+     xmlns:johnson87is="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#"
+     xmlns:mandlerpaganis="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#">
+    <owl:Ontology rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#"/>
+        <rdfs:comment>ISAAC network module of comparison among Image Schemas Theories using the intensional epistemological vocabulary of Exuviae module, from COntPare methodology.
+
+Version 1.0: 29-04-2021 includes Hedblom module, Johnson1987 module and MPC module + Exuviae module + DUL + Framester alignments.
+
+Designed by Stefano De Giorgis and Aldo Gangemi.</rdfs:comment>
+        <owl:versionInfo>1.3 Added class alignments to DUL</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinesWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinesWith"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ReframingModus -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ReframingModus"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#TheoreticalFragment -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#TheoreticalFragment"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#Concept -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#Concept">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#Event -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#Event">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Complexity -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Complexity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Family -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Family">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Form -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Form">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Transformation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Transformation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialPrimitive -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialPrimitive">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialSchema -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialSchema">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCriterionMeasurement -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCriterionMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#CriterionMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISRefraimingModus -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISRefraimingModus">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ReframingModus"/>
+        <rdfs:comment>Image Schema notions are often blurred, overlapping in their extensionality with the Spatial Primitive class, not formalized and not clarified in their way of combining with themselves, spatial primitives or other non-sensorimotor material.
+This class, without claiming to have all the answers, represents ways to evaluate modifications to those entities, in the epistemic debate process trying to clarify all the aspects above mentioned.</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISSelectionResult -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISSelectionResult">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#SelectionResult"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheory -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheory">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Theory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryEpistemicComparison -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryEpistemicComparison">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#hasCriterionMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCriterionMeasurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#hasReframingModus"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISRefraimingModus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#hasSelectionCriterion"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheorySelectionCriterion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#includesInComparison"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryFragment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Epistemological comparison applied to Image Schema theories. This class takes as instances the Comparison of different Fragments grouped for their semantic field.
+e.g. all the fragments related to the notion of Image Schemas in compared theories, or all the fragments related to the ways of grouping image schemas in different theories.</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryFragment -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryFragment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#TheoreticalFragment"/>
+        <rdfs:comment>Any collection of theoretical fragments from Image Schema Theories.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheorySelectionCriterion -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheorySelectionCriterion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#SelectionCriterion"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#BodilyExperience -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#BodilyExperience">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Entailment -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Entailment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltCriterion -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltCriterion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltStructure -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltStructure">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#IS_Component -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#IS_Component">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchemataTransformation -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchemataTransformation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchema -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchema">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchemata -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchemata">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#LinguisticRealization -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#LinguisticRealization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalMappingRequirement -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalMappingRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalProjection -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalProjection">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#NeisserSchema -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#NeisserSchema">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Script -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Script">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Approach -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Approach">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Combination -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Combination">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_ComplexityCriterion -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_ComplexityCriterion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Grouping -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Grouping">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#ImageSchema -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#ImageSchema">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SpatialPrimitive -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SpatialPrimitive">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_CombinationType -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_CombinationType">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+        <exuviae:reframes rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchemataTransformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Complexity -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Complexity">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment"/>
+        <exuviae:explicates rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_ComplexityCriterion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Family -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Family">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+        <exuviae:specifies rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Grouping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Form -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Form">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+        <exuviae:hasReframingModus rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISActivationModus"/>
+        <exuviae:reframes rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Grouping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Transformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Transformation">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_familyIntersectionWith -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_familyIntersectionWith">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_profile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_profile">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialPrimitive -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialPrimitive">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentFragment"/>
+        <exuviae:reuses rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SpatialPrimitive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialSchema -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialSchema">
+        <exuviae:reframes rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchema"/>
+        <exuviae:reuses rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#ImageSchema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinationType -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinationType">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinesWith -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinesWith">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#fineTuningFor -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#fineTuningFor">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groupedInFamily -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groupedInFamily">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groups -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groups">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCollectionElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCollectionElement">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasForm -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasForm">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasMergingElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasMergingElement">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasSequenceElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasSequenceElement">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#intersectionResultOf -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#intersectionResultOf">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isDynamicFormFor -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isDynamicFormFor">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isStaticFormFor -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isStaticFormFor">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#makesUseOf -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#makesUseOf">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#movementTypeFrom -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#movementTypeFrom">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#profilePartecipant -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#profilePartecipant">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#spatialOrganizationFrom -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#spatialOrganizationFrom">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#BodilyExperienceEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#BodilyExperienceEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#BodilyExperience"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#groundedIn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ConceptualDerivationEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ConceptualDerivationEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#conceptuallyDerivedFrom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#EmbodiementCognitionModus -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#EmbodiementCognitionModus"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#EmbodimentCognitionModus -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#EmbodimentCognitionModus">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ReframingModus"/>
+        <rdfs:comment>Some Entity is reframed with the addition of some conceptual aspect related to Embodied Cognition Theory.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#GestaltCriterionEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#GestaltCriterionEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltCriterion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#GestaltStructureEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#GestaltStructureEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:hasSelectionCriterion rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryCentralityCriterion"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltStructure"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltStructure"/>
+        <rdfs:comment>While being an instance of the Class comparing Image Schema Theory Fragments, this Entity refers to those fragments being unique, e.g. entities introduced only in one theory and not strictly comparable with other fragments of the same or other theories. For this reason more than a &quot;comparison&quot; it is an evaluation of those &quot;hapax legomenon&quot; concpetual entities. The reason to derive an Hapax Legomenon Entity could be that it allows formal improvements, theoretical clarification, conceptual bridging toward different theories etc.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#HedblomISTheory -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#HedblomISTheory">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheory"/>
+        <exuviae:conceptuallyDerivedFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#MPCISTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISActivationModus -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISActivationModus">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ReframingModus"/>
+        <rdfs:comment>The Grouping of Image Schemas could be done based on their activation from some linguistic material.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISApproachEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISApproachEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Approach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationComparison -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationComparison">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_CombinationType"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_familyIntersectionWith"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinationType"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinesWith"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCollectionElement"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasMergingElement"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasSequenceElement"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#intersectionResultOf"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#makesUseOf"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#spatialOrganizationFrom"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#hasSpatialInput"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#isTopologyProviderFor"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_CombinationType"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_familyIntersectionWith"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinationType"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinesWith"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCollectionElement"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasMergingElement"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasSequenceElement"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#intersectionResultOf"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#makesUseOf"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#spatialOrganizationFrom"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchemataTransformation"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Combination"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#combinationResultsFrom"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#hasSpatialInput"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#isTopologyProviderFor"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#makesUseOf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryFragment"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_CombinationType"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Transformation"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_familyIntersectionWith"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinationType"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinesWith"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCollectionElement"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasMergingElement"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasSequenceElement"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#intersectionResultOf"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#makesUseOf"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#spatialOrganizationFrom"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchemataTransformation"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Combination"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#combinationResultsFrom"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#hasSpatialInput"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#isTopologyProviderFor"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#makesUseOf"/>
+        <rdfs:comment>The collection of conceptual fragments about the Concept of &quot;Image Schema Combinations&quot; in different theories.
+e.g. ways of combining Image Schemas among them, ways of combining Image Schemas with Spatial Primitives, ways of combining Image Schemas with non spatial concepts etc.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentComparison -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentComparison">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:hasCriterionMeasurement rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentProductivityMeasurement"/>
+        <exuviae:hasSelectionCriterion rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentProductivityCriterion"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialPrimitive"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialPrimitive"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#IS_Component"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SpatialPrimitive"/>
+        <rdfs:comment>The epistemological comparison about different notions of &quot;Image Schema Components&quot; in different theories.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentFragment -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentFragment">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryFragment"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialPrimitive"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#IS_Component"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SpatialPrimitive"/>
+        <rdfs:comment>The collection of conceptual fragments about the Concept of &quot;Image Schema Components&quot; in different theories.
+e.g. &quot;components&quot;, &quot;spatial primitives&quot;, foundamental spatial building blocks&quot; etc.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentProductivityCriterion -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentProductivityCriterion">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ProductivityCriterion"/>
+        <rdfs:comment>The Usage that the &quot;Image Schema components&quot; class have in the ontological version of some Theory.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentProductivityMeasurement -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentProductivityMeasurement">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ProductivityMeasurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISEntailmentEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISEntailmentEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Entailment"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#entailedBy"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#entails"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISFormalizationModus -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISFormalizationModus">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ReframingModus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingComparison -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingComparison">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:hasReframingModus rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISActivationModus"/>
+        <exuviae:hasReframingModus rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#SPActivationModus"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Family"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_profile"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groupedInFamily"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groups"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#profilePartecipant"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Family"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_profile"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groupedInFamily"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groups"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#profilePartecipant"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Grouping"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#groupedIn"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#groups"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryFragment"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Family"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_profile"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groupedInFamily"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#groups"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#profilePartecipant"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Grouping"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#groupedIn"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#groups"/>
+        <rdfs:comment>The collection of conceptual fragments about the Concept of &quot;Image Schema Grouping&quot; in different theories.
+e.g. grouping according to a semantic field, grouping according to activation from lexical material, grouping for complexity degree etc.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISProductivityCriterion -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISProductivityCriterion">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ProductivityCriterion"/>
+        <rdfs:comment>The Usage that the &quot;ImageSchema&quot; class have in the ontological version of some Theory.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISProductivityMeasurement -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISProductivityMeasurement">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ProductivityMeasurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityComparison -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityComparison">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Form"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#fineTuningFor"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasForm"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isDynamicFormFor"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isStaticFormFor"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#movementTypeFrom"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Complexity"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Form"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#fineTuningFor"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasForm"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isDynamicFormFor"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isStaticFormFor"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#movementTypeFrom"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_ComplexityCriterion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryFragment"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Complexity"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Form"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#fineTuningFor"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasForm"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isDynamicFormFor"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#isStaticFormFor"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#movementTypeFrom"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_ComplexityCriterion"/>
+        <rdfs:comment>The collection of conceptual fragments about the Concept of &quot;Image Schema Quality&quot; in different theories.
+e.g. the Static vs Dynamic Form, the complexity etc.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryCentralityCriterion -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryCentralityCriterion">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#TheoryCentralityCriterion"/>
+        <rdfs:comment>Some Fragment of a theory is particularly important to that theory.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ImageSchemaComparison -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ImageSchemaComparison">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:hasCriterionMeasurement rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISProductivityMeasurement"/>
+        <exuviae:hasSelectionCriterion rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISProductivityCriterion"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialSchema"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialSchema"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchema"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchemata"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#NeisserSchema"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#ImageSchema"/>
+        <rdfs:comment>The epistemological comparison about different notions of &quot;Image Schema&quot; in different theories.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ImageSchemaFragment -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ImageSchemaFragment">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryFragment"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#SpatialSchema"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchema"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchemata"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#NeisserSchema"/>
+        <dul:hasMember rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#ImageSchema"/>
+        <rdfs:comment>The collection of conceptual fragments about the Concept of &quot;Image Schema&quot; in different theories.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#Johnson87ISTheory -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#Johnson87ISTheory">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#MPCISTheory -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#MPCISTheory">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheory"/>
+        <exuviae:reuses rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltStructure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#MetaphoricalMappingRequirementEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#MetaphoricalMappingRequirementEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalMappingRequirement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#MetaphoricalProjectionEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#MetaphoricalProjectionEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalProjection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#SPActivationModus -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#SPActivationModus">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#ReframingModus"/>
+        <rdfs:comment>The Grouping of Spatial Primitives could be done based on their activation from some linguistic material.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#SchematicIntegrationEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#SchematicIntegrationEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:hasSelectionCriterion rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISTheoryCentralityCriterion"/>
+        <exuviae:hasSelectionResult rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ScriptEvaluation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ScriptEvaluation">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison"/>
+        <exuviae:includesInComparison rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#BodilyExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#BodilyExperience">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Entailment -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Entailment">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltCriterion -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltCriterion">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltStructure -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#GestaltStructure"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#IS_Component -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#IS_Component">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchema -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchema">
+        <exuviae:explicates rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchemata"/>
+        <exuviae:explicates rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#NeisserSchema"/>
+        <exuviae:hasReframingModus rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#EmbodiementCognitionModus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchemataTransformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchemataTransformation">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchemata -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#KantianSchemata"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalMappingRequirement -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalMappingRequirement">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalProjection -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#MetaphoricalProjection">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#NeisserSchema -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#NeisserSchema"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Script -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#Script">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#conceptuallyDerivedFrom -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#conceptuallyDerivedFrom">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#entailedBy -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#entailedBy">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#entails -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#entails">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#groundedIn -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#groundedIn">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Approach -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Approach">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#HapaxLegomenonEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Combination -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Combination">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_ComplexityCriterion -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_ComplexityCriterion">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Grouping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#IS_Grouping">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#ImageSchema -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#ImageSchema">
+        <exuviae:reframes rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#ImageSchema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SpatialPrimitive -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SpatialPrimitive">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentFragment"/>
+        <exuviae:reframes rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#IS_Component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#combinationResultsFrom -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#combinationResultsFrom">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#groupedIn -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#groupedIn">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#groups -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#groups">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#hasSpatialInput -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#hasSpatialInput">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#isTopologyProviderFor -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#isTopologyProviderFor">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#makesUseOf -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#makesUseOf">
+        <dul:isMemberOf rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationFragment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement"/>
+                        <swrl:argument1 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#x"/>
+                        <swrl:argument2 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement"/>
+                                <swrl:argument1 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#x"/>
+                                <swrl:argument2 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#y"/>
+                                        <swrl:argument2 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinesWith"/>
+                        <swrl:argument1 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#y"/>
+                        <swrl:argument2 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
