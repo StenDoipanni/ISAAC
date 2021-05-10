@@ -37,25 +37,58 @@ Comparing different, at times conflicting, theoretical accounts on one and the s
 
 
 
-### Johnson1987 module
+### ISAAC ontology network in detail
+
+
+**Johnson1987**
 
 The ontological transposition of the first five chapters of Mark Johnson's "The Body in the Mind".
 This theory was chosen because it is the beginning of the last 40 years of studies about embodied cognition, moving first steps in 1987 and still very alive and in need of further work.
 
 
-### Mandler and Pagán Cánovas module
+
+**Mandler and Pagán Cánovas**
 
 The ontological version of [1](https://d1wqtxts1xzle7.cloudfront.net/39255761/54d803e90cf2970e4e764653.pdf?1445107592=&response-content-disposition=inline%3B+filename%3DOn_defining_image_schemas.pdf&Expires=1620342019&Signature=LcS38kkqdWTN3F6HumKPZ~xa4rIc8Q5MV2hevqclSLpmWsryhKI3496FcZwYljKbGeSNlvmfv-OBIOzCY37FGH4oedAVdHTNDzvNoVfdIQ7Zzru3daKdTWrypGIsKuGOHgwF46J7-Mr9SDoHtG7H9MeNA1TqHFNwhdt1xVQ62OuAuJk27kXSr1y~RHqVqTC7l~GbFVwQ9us8zzcWfUiLkFTX89rz3b0sGYdVpyze6PVEaYdYFY8DhQUgBFi5ppPbT9VkbwF5Akn7Y7WQ2Y18Vyms6n3LPSqNdnL-mEcOquBDxueaslGOZ~xruftZzTgYYxQPVxFHARRdDPbe7A0NDg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA). This module was chosen for the importance of introducing spatial primitives, namely the first spatial building blocks, and introducing some light formalization in the compositionality of image schemas.
 
 
-### Hedblom Module
+
+**Hedblom**
 
 The ontological version of the image schema theory elaborated by Hedblom et al. in [1](https://link.springer.com/article/10.1007/s13218-019-00605-1), [2](https://dl.acm.org/doi/abs/10.1145/3167132.3167233?casa_token=jA3_AHLyUroAAAAA:r1dve2UFBe2nfhN0nHn8irpKYRhH-MQdqbCpzvZvAJyNO8UzPJ6K3ZdBwOrN3T7ZTlOX4yPZQxU), [3](https://www.inf.unibz.it/~okutz/resources/Choosing-the-Right-Path_-Image-Schema-Theory-as-a-Foundation-for-Concept-Invention-(JAGI).pdf) and [4](http://aiia2017.di.uniba.it/wp-content/uploads/Hedblom.pdf).
 This module was chosen for its importance in formalizing image schemas structure, image schemas combinations and image schemas complexity depending on the reuse of spatial primitives.
 
 
-### ISCAT module
+
+**ISCAT**
 
 The module obtained from the reorganization of [1](http://zope.psyergo.uni-wuerzburg.de/iscat) in a well documented CSV file available [here](https://github.com/dgromann/ImageSchemaRepository).
+
+
+**ISFrame**
+The mappings from ISCAT repository to FrameNet and MetaNet source and target domain frames, declaring also the spatial primitive / image schema gestaltically structuring the metaphor.
+
+
+**Exuviae**
+
+Exuviae (In biology, exuviae are the remains of an exoskeleton and related structures that are left after ecdyso-zoans - including insects, crustaceans and arachnids - have moulted.” [wiki here](https://en.wikipedia.org/wiki/Exuviae) ) is the module used to explain the epistemic choices done while comparing elements of the same or different theories.
+Some of the main classes:
+
+- _ex:TheoreticalFragment_: a TheoreticalFragment is a collection of related ontology elements from one or multiple theories. The fragment derives from comparing different theories by applying epistemological choices made based on some criterion, leading to a selection result;
+- _ex:EpistemicComparison_: the hub for epistmic operations on theory fragments with the purpose to compare and select one;
+- _ex:CriterionMeasurement_: the Measurement of the Criterion chosen to select a Fragment against another. e.g. better literature grounding, more soundness, better resources at disposal, more operationalizable structure etc.;
+- _ex:SelectionCriterion_: the Criterion based on which some Selection is made.
+
+
+![Exuviae graph](exuviae.svg)
+
+
+
+**ISExuviae**
+
+The Exuviae epistemical exoskeleton applied to image schemas theories, in their ontological version, aligned foundationally to DOLCE+DnS and Framester.
+
+
+**Integrated Theory**
 
 
