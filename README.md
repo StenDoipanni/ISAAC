@@ -62,7 +62,7 @@ This module was chosen for its importance in formalizing image schemas structure
 
 **ISCAT**
 
-The module obtained from the reorganization of [1](http://zope.psyergo.uni-wuerzburg.de/iscat) in a well documented CSV file available [here](https://github.com/dgromann/ImageSchemaRepository).
+The module obtained from the reorganization of [this resource](http://zope.psyergo.uni-wuerzburg.de/iscat) in a well documented CSV file available [here](https://github.com/dgromann/ImageSchemaRepository).
 
 
 **ISFrame**
@@ -76,10 +76,12 @@ Exuviae (In biology, exuviae are the remains of an exoskeleton and related struc
 
 Some of the main classes:
 
-- _ex:TheoreticalFragment_: a TheoreticalFragment is a collection of related ontology elements from one or multiple theories. The fragment derives from comparing different theories by applying epistemological choices made based on some criterion, leading to a selection result;
+- _ex:TheoreticalFragment_: a TheoreticalFragment is a collection of related ontology elements from one or multiple theories. The fragment is the hub useful to compare different theories and derive some element by applying epistemological choices made based on some criterion, leading to a selection result;
 - _ex:EpistemicComparison_: the hub for epistmic operations on theory fragments with the purpose to compare and select one;
 - _ex:CriterionMeasurement_: the Measurement of the Criterion chosen to select a Fragment against another. e.g. better literature grounding, more soundness, better resources at disposal, more operationalizable structure etc.;
-- _ex:SelectionCriterion_: the Criterion based on which some Selection is made.
+- _ex:SelectionCriterion_: the Criterion based on which some Selection is made;
+- _RefraimingModus_: the way in which some entity is conceptually derived from a theory but with some modifications;
+- _ex:SelectionResult_: the result of the Selection based on some SelectionCriterion.
 
 
 ![Exuviae graph](exuviae.svg)
@@ -89,6 +91,8 @@ Some of the main classes:
 **ISExuviae**
 
 The Exuviae epistemical exoskeleton applied to image schemas theories, in their ontological version, aligned foundationally to DOLCE+DnS and Framester.
+This module is the one in which different elements of ontologies are clustered in the same TheoreticalFragment. The Theoreticalfragment hub is used to apply some SelectionCriterion and CriterionMeasurement in order to compare ontology elements among them.
+e.g. in the "ImageSchemaFragment" we find the collection of "ImageSchema" concepts as presented in the Johnoons87, Hedblom and Mandler&Pagán Cánovas theories.
 
 
 **ISAAC**
