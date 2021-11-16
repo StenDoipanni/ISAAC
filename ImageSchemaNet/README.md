@@ -1,7 +1,17 @@
 
 # Image Schema Net
 
-Commonsense knowledge is a broad and challenging area of research which investigate our understanding of the world as wellas human assumptions about the reality of facts inside and outside the single individual. Deriving directly from the subjectiveperception of the external world this makes it intrinsically intertwined with embodied cognition, and commonsense reasoningin particular is linked to human pattern recognition ability. This work proposes a new resource, part of this line of research,formalizing image-schematic layer of cognition. Image Schemas, in fact, are recurring, dynamic patterns which takes originfrom our perceptual interactions and motor programs and enable our sense-making cognitive activity conferring coherence andstructure to entities, events and situations we experience everyday. ImageSchemaNet is a resource in ontological form whichalignes many pre-existing resources like FrameNet, VerbNet, WordNet, from the Framester hub to Image Schema theory andoperationalize it providing vast lexical coverage and multi-layered semantic structures alignments.
+Commonsense knowledge is a broad and challenging area of research which investigates our understanding of the world as well as human assumptions about reality.
+Deriving directly from the subjective perception of the external world makes it intrinsically intertwined with embodied cognition. 
+Commonsense reasoning in particular is linked to human sense-making, pattern recognition and knowledge framing abilities. 
+
+ImageSchemaNet is a new resource that formalizes the cognitive theory of image schemas. 
+
+
+Image schemas are described as dynamic conceptual building blocks originating from our sensorimotor interactions with the physical world, and enable our sense-making cognitive activity to assign coherence and structure to entities, events and situations we experience everyday.
+
+
+ImageSchemaNet is an ontology that aligns pre-existing resources, such as FrameNet, VerbNet, WordNet and MetaNet from the Framester hub, to image schema theory, aiming at an empirical application of image schemas combined with sematic parsers on the task of annotating natural language sentences with image schemas.
 
 
 
