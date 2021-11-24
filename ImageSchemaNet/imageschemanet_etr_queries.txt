@@ -1,0 +1,53 @@
+
+
+-------------- ASK -----------------
+
+Query to ask if some entity is a lexical activator of some spatial primitive which is necessary to the image schemaCONTAINMENT.
+
+
+ASK
+?entity isnet:lexicalSenseActivation ?sp .
+?sp ^isnet:necessarySP isnet:CONTAINMENT .
+
+
+
+-------------- SELECT -----------------
+
+
+
+Query to retrieve all the entities, image schemas and spatial primitives for which some entity is a lexical activator of some SP which is a necessary SP to some IS.
+
+
+SELECT DISTINCT ?entity ?is ?sp
+WHERE {
+?entity isnet:lexicalSenseActivation ?sp .
+?sp ^isnet:necessarySP ?is .
+FILTER(regex(?entity, "insert_variable", "i")) }
+
+
+
+-------------- CONSTRUCT -----------------
+
+
+Query to simulate the image-schema-profile extraction starting from a single non disambiguated lexical unit.
+The query can be executed by replacing each "insert_variable" with the same lexical unit.
+
+
+CONSTRUCT { [] isnet:ISProfile ?isLex , ?coresp , ?perisp , ?etsp , ?semis, ?rolesp . }
+WHERE {
+{ ?x1 isnet:lexicalSenseActivation ?isLex .
+FILTER(regex(?x1, "insert_variable", "i")) }
+UNION
+{ ?x2 isnet:coreSPActivation ?coresp .FILTER(regex(?x2, "insert_variable", "i")) }
+UNION
+{ ?x3 isnet:peripheralSPActivation ?perisp .FILTER(regex(?x3, "insert_variable", "i")) }
+UNION
+{ ?x4 isnet:extraThematicSPActivation ?etsp .FILTER(regex(?x4, "insert_variable", "i")) }
+UNION
+{ ?x5 isnet:semTypeActivation ?semis .FILTER(regex(?x5, "insert_variable", "i")) }
+UNION
+{ ?x6 isnet:semanticRoleActivation ?rolesp .FILTER(regex(?x6, "insert_variable", "i")) }
+}
+
+
+
