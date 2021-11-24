@@ -1,4 +1,7 @@
 
+Here you find the queries to Framester endpoint used to build the resource, you can replicate, test and even extend the procedure used for the activation assertions.
+
+
 -------- Frames Activation Query -------------
 
 
