@@ -1,0 +1,123 @@
+
+-------- Frames Activation Query -------------
+
+
+SELECT DISTINCT ?frame
+WHERE{
+?frame rdf:type fschema:ConceptualFrame , owl:Class ;
+      rdfs:subClassOf fschema:FrameOccurrence ;
+      owl:sameAs ?fnframe .
+?fnframe skos:closeMatch ?syn ; a fn15schema:Frame .
+?syn wn30schema:senseLabel "insert_variable"@en-us
+} LIMIT 100
+
+
+
+-------- Frame Elements Activation Query -------------
+
+
+SELECT DISTINCT ?corefe ?etfe ?perife
+WHERE {
+{
+?frame1 fn15schema:hasFrameElement ?corefe .
+?corefe <https://w3id.org/framester/framenet/tbox/FE_coreType> "Core"^^xsd:string .
+FILTER(regex(?corefe, "insert_variable", "i"))
+}
+UNION
+{
+?frame2 fn15schema:hasFrameElement ?etfe .
+?etfe <https://w3id.org/framester/framenet/tbox/FE_coreType> "Extra-Thematic"^^xsd:string .
+FILTER(regex(?etfe, "insert_variable", "i"))
+}
+UNION
+{
+?frame3 fn15schema:hasFrameElement ?perife .
+?perife <https://w3id.org/framester/framenet/tbox/FE_coreType> "Peripheral"^^xsd:string .
+FILTER(regex(?perife, "insert_variable", "i"))
+}
+}
+
+
+-------- Lexical Elements Activation Query -------------
+
+
+SELECT DISTINCT ?framestersyn ?wnsyn
+WHERE{
+  <"insert_frame_uri"> <https://w3id.org/framester/schema/subsumes> ?framestersyn .
+?framestersyn a <https://w3id.org/framester/schema/WnSynsetFrame> ;
+<https://w3id.org/framester/schema/unaryProjection> ?wnsyn .
+}
+
+
+
+-------- General Semantic Roles Activation Query -------------
+
+
+SELECT DISTINCT ?argument ?fe ?gfe ?genRole ?genArg ?tropeRole ?semRole
+{ GRAPH ?g {
+{ ?argument a <https://w3id.org/framester/vn/schema/Argument>.
+FILTER(regex(?argument, "insert_variable", "i")) }
+UNION
+{ ?fe a <https://w3id.org/framester/framenet/tbox/FrameElement> .
+FILTER(regex(?fe, "insert_variable", "i")) }
+UNION
+{ ?gfe a <https://w3id.org/framester/framenet/tbox/GenericFE> .
+FILTER(regex(?gfe, "insert_variable", "i")) }
+UNION
+{?genRole a <https://w3id.org/framester/schema/GenericRole> .
+FILTER(regex(?genRole, "insert_variable", "i")) }
+UNION
+{ ?genArg a <https://w3id.org/framester/vn/schema/GenericArgument> .
+FILTER(regex(?genArg, "insert_variable", "i")) }
+UNION
+{ ?tropeRole a<https://w3id.org/framester/wn/wn30/wordnet-verbnountropes/TropeRole> .
+FILTER(regex(?tropeRole, "insert_variable", "i")) }
+UNION
+{ ?semRole a <https://w3id.org/framester/schema/semanticRole> .
+FILTER(regex(?semRole, "insert_variable", "i")) }
+} }
+
+
+
+
+-------- Specific Semantic Roles Activation Query -------------
+
+
+SELECT DISTINCT ?x ?coreRole ?y ?arg ?z ?fe ?k ?role ?s ?necRole ?q ?optRole?r ?vnRole
+{ GRAPH ?g {
+{ ?x <https://w3id.org/framester/schema/coreRole> ?coreRole .
+FILTER(regex(?coreRole, "insert_variable", "i")) }
+UNION
+{ ?y <https://w3id.org/framester/vn/schema/hasArgument> ?arg .
+FILTER(regex(?arg, "insert_variable", "i")) }
+UNION
+{ ?z <https://w3id.org/framester/framenet/tbox/hasFrameElement> ?fe .
+FILTER(regex(?fe, "insert_variable", "i")) }
+UNION
+{ ?k <https://w3id.org/framester/pb/pbschema/hasRole> ?role .
+FILTER(regex(?role, "insert_variable", "i")) }
+UNION
+{ ?s <https://w3id.org/framester/schema/necessaryRole> ?necRole .
+FILTER(regex(?necRole, "insert_variable", "i")) }
+UNION
+{ ?q <https://w3id.org/framester/schema/optionalRole> ?optRole .
+FILTER(regex(?optRole, "insert_variable", "i")) }
+UNION
+{ ?r <https://w3id.org/framester/schema/vnRole> ?vnRole .
+FILTER(regex(?vnRole, "insert_variable", "i")) }
+} }
+
+
+
+-------- Semantic Type Query -------------
+
+
+SELECT DISTINCT ?entity ?semanticType
+WHERE {
+?entity <https://w3id.org/framester/framenet/tbox/hasSemType> ?semanticType .
+FILTER(regex(?entity, "insert_variable", "i"))
+}
+
+
+
+
