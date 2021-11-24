@@ -45,10 +45,9 @@ Query to retrieve all the entities, image schemas and spatial primitives for whi
 PREFIX isnet: <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#>
 PREFIX isaac: <http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#>
 
-SELECT DISTINCT ?entity ?is ?sp
-WHERE { <br/>
+SELECT DISTINCT ?entity ?sp
+WHERE {
 ?entity isnet:lexicalSenseActivation ?sp .
-?sp ^isnet:necessarySP ?is .
 FILTER(regex(?entity, "insert_variable", "i"))
 }
 
