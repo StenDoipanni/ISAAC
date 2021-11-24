@@ -1,0 +1,1763 @@
+@prefix : <http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#> .
+@prefix fe: <https://w3id.org/framester/framenet/abox/fe/> .
+@prefix vn: <https://w3id.org/framester/vn/vn31/data/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix exu: <http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#> .
+@prefix gfe: <https://w3id.org/framester/framenet/abox/gfe/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix opla: <http://ontologydesignpatterns.org/opla#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix isexu: <http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix pbdata: <https://w3id.org/framester/pb/pbdata/> .
+@prefix fschema: <https://w3id.org/framester/schema/> .
+@prefix pbschema: <https://w3id.org/framester/pb/pbschema/> .
+@prefix hedblomis: <http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#> .
+@prefix johnson87is: <http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#> .
+@prefix wntroperole: <https://w3id.org/framester/wn/wn30/wordnet-verbnountropes/> .
+@prefix framesterrole: <https://w3id.org/framester/data/framesterrole/> .
+@prefix mandlerpaganis: <http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#> .
+
+<http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl> a owl:Ontology ;
+	owl:imports <http://www.ontologydesignpatterns.org/ont/is/exuviae.owl> ;
+	rdfs:comment """ISAAC module is the integrated module of the ISAAC ontology network, it is a formal theory about image schemas, proposed in the form of ontology, conceptually derived from the comparison and harmonization of the Hedblom, Johnson87 and Mandler&Pagán Cánovas ISAAC network ontology modules.
+By means of the DUL+DnS foundational grounding and the TheoreticalFragment class in the ISExuviae module, it was possible to isolate ontology elements in conceptual classes, sort of semantic fields, and build a new ontology soundly and consistently committing, when necessary, to what in our view was the best option among competing classes and properties in fragments.
+In particular the integrated module reuses the theoretical background from Johnson1987, and classes from MPC and Hedblom, evetually refraimed with the aim of Exuviae vocabulary, according to COntPare methodology.
+
+Designed by Stefano De Giorgis and Aldo Gangemi.""" ;
+	owl:versionInfo """1.2 - Provided original references via :bibRef property to classes and properties.
+
+1.1 - Provided better axiomatization and DUL+DnS alignment.
+
+1.0 - ISAAC module conceptually derived from image schema theories modules.""" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+
+swrla:isRuleEnabled a owl:AnnotationProperty .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#operationalizedVia
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#operationalizedVia> a owl:AnnotationProperty ;
+	rdfs:comment """This property aims at the same time at:
+- documenting the knowledge extraction process
+- providing a way to replicate and implement further results
+
+This annotation property shows the queries to Framester hub resource which were used to retrieve information for the entities - image schemas alignment.
+Note that the selection and filtering of the query results (for their being more or less relevant) was in any case done mainly by a human, this was done to avoid unnecessary noise and improve results quality, so, the queries provided are the necessary tool to retrieve the information from which further reasoning is not only possible but higly fostered.""" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent
+
+dul:hasComponent a owl:ObjectProperty .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality
+
+dul:hasQuality a owl:ObjectProperty .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isComponentOf
+
+dul:isComponentOf a owl:ObjectProperty .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf
+
+dul:isMemberOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:isMemberOf .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#ISfamilyIntersectionWith
+
+:ISfamilyIntersectionWith a owl:ObjectProperty , owl:SymmetricProperty ;
+	rdfs:domain :IS_Family ;
+	rdfs:range :IS_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#ISprofile
+
+:ISprofile a owl:ObjectProperty ;
+	rdfs:domain owl:Thing ;
+	rdfs:range :IS_Profile .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#combinationType
+
+:combinationType a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:isComponentOf ;
+	rdfs:domain :ImageSchema ;
+	rdfs:range :IS_Combination .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#combinesWith
+
+:combinesWith a owl:ObjectProperty , owl:SymmetricProperty ;
+	rdfs:domain :ImageSchema ;
+	rdfs:range _:genid1 .
+
+_:genid1 a owl:Class ;
+	owl:unionOf _:genid3 .
+
+_:genid3 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid2 .
+
+_:genid2 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+:combinesWith owl:propertyChainAxiom _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first :combinationType ;
+	rdf:rest _:genid4 .
+
+_:genid4 a rdf:List ;
+	rdf:first _:genid5 .
+
+_:genid5 owl:inverseOf :combinationType .
+
+_:genid4 rdf:rest rdf:nil .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#fineTuningFor
+
+:fineTuningFor a owl:ObjectProperty ;
+	rdfs:domain :ImageSchema ;
+	rdfs:range :ImageSchema .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#groupedInFamily
+
+:groupedInFamily a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:isMemberOf ;
+	owl:inverseOf :groups ;
+	rdfs:domain _:genid7 .
+
+_:genid7 a owl:Class ;
+	owl:unionOf _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+:groupedInFamily rdfs:range :IS_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#groups
+
+:groups a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:hasMember ;
+	rdfs:domain :IS_Family ;
+	rdfs:range _:genid10 .
+
+_:genid10 a owl:Class ;
+	owl:unionOf _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasCollectionElement
+
+:hasCollectionElement a owl:ObjectProperty ;
+	rdfs:subPropertyOf :hasCombinationElement .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasCombinationElement
+
+:hasCombinationElement a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:hasComponent ;
+	rdfs:domain _:genid13 .
+
+_:genid13 a owl:Class ;
+	owl:unionOf _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+:hasCombinationElement rdfs:range _:genid16 .
+
+_:genid16 a owl:Class ;
+	owl:unionOf _:genid18 .
+
+_:genid18 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasForm
+
+:hasForm a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:hasQuality ;
+	rdfs:domain _:genid19 .
+
+_:genid19 a owl:Class ;
+	owl:unionOf _:genid21 .
+
+_:genid21 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid20 .
+
+_:genid20 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+:hasForm rdfs:range :IS_Form .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasMergingElement
+
+:hasMergingElement a owl:ObjectProperty ;
+	rdfs:subPropertyOf :hasCombinationElement .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasSequenceElement
+
+:hasSequenceElement a owl:ObjectProperty ;
+	rdfs:subPropertyOf :hasCombinationElement .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasSpatialInput
+
+:hasSpatialInput a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:hasComponent ;
+	owl:inverseOf :isTopologyProviderFor ;
+	rdfs:domain :SchematicIntegration ;
+	rdfs:range _:genid22 .
+
+_:genid22 a owl:Class ;
+	owl:unionOf _:genid24 .
+
+_:genid24 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid23 .
+
+_:genid23 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#intersectionResultOf
+
+:intersectionResultOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:hasComponent ;
+	rdfs:domain :ImageSchema ;
+	rdfs:range :ImageSchema .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isActivatedBy
+
+:isActivatedBy a owl:ObjectProperty ;
+	owl:inverseOf <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> ;
+	rdfs:domain _:genid25 .
+
+_:genid25 a owl:Class ;
+	owl:unionOf _:genid27 .
+
+_:genid27 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid26 .
+
+_:genid26 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+:isActivatedBy rdfs:comment "Some Image Schema or Spatial Primitive is activated by some Frame, Frame Element or Framester role." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isDynamicFormFor
+
+:isDynamicFormFor a owl:ObjectProperty ;
+	rdfs:subPropertyOf fschema:hasPerspective ;
+	owl:inverseOf :isStaticFormFor ;
+	rdfs:domain _:genid28 .
+
+_:genid28 a owl:Class ;
+	owl:unionOf _:genid30 .
+
+_:genid30 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid29 .
+
+_:genid29 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+:isDynamicFormFor rdfs:range _:genid31 .
+
+_:genid31 a owl:Class ;
+	owl:unionOf _:genid33 .
+
+_:genid33 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid32 .
+
+_:genid32 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isStaticFormFor
+
+:isStaticFormFor a owl:ObjectProperty ;
+	rdfs:subPropertyOf fschema:hasPerspective ;
+	rdfs:domain _:genid34 .
+
+_:genid34 a owl:Class ;
+	owl:unionOf _:genid36 .
+
+_:genid36 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid35 .
+
+_:genid35 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+:isStaticFormFor rdfs:range _:genid37 .
+
+_:genid37 a owl:Class ;
+	owl:unionOf _:genid39 .
+
+_:genid39 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid38 .
+
+_:genid38 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isTopologyProviderFor
+
+:isTopologyProviderFor a owl:ObjectProperty ;
+	rdfs:subPropertyOf dul:isComponentOf .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isUsedBy
+
+:isUsedBy a owl:ObjectProperty ;
+	owl:inverseOf :makesUseOf .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#makesUseOf
+
+:makesUseOf a owl:ObjectProperty ;
+	rdfs:domain :ImageSchema ;
+	rdfs:range _:genid40 .
+
+_:genid40 a owl:Class ;
+	owl:unionOf _:genid42 .
+
+_:genid42 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid41 .
+
+_:genid41 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#movementTypeFrom
+
+:movementTypeFrom a owl:ObjectProperty .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#necessarySP
+
+:necessarySP a owl:ObjectProperty ;
+	rdfs:subPropertyOf fschema:necessaryRole ;
+	owl:inverseOf :necessarySPFor ;
+	rdfs:domain :ImageSchema ;
+	rdfs:range :SpatialPrimitive ;
+	rdfs:comment "Some Image Schema has necessary Spatial Primitive some Spatial Primitive." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#necessarySPFor
+
+:necessarySPFor a owl:ObjectProperty ;
+	rdfs:domain :SpatialPrimitive ;
+	rdfs:range :ImageSchema ;
+	rdfs:comment "Some Spatial Primitive is a necessary Spatial Primitive for some Image Schema (according to its gestaltic nature)." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#profileParticipant
+
+:profileParticipant a owl:ObjectProperty ;
+	rdfs:domain :IS_Profile ;
+	rdfs:range :ImageSchema .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#spatialOrganizationFrom
+
+:spatialOrganizationFrom a owl:ObjectProperty ;
+	rdfs:domain :ImageSchema ;
+	rdfs:range :ImageSchema .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> a owl:ObjectProperty ;
+	rdfs:range _:genid43 .
+
+_:genid43 a owl:Class ;
+	owl:unionOf _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid44 .
+
+_:genid44 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> rdfs:comment "Some Frame, Frame Element or Framester role activates some SpatialPrimitive or ImageSchema." , """aggiungere in annotazione una property in cui metto la query.
+
+operationalized through""" .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#coreSPActivation
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#coreSPActivation> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> ;
+	rdfs:range :SpatialPrimitive ;
+	<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#operationalizedVia> """The query to retrieve all the frame elements of type \"Core\", \"Extra-thematic\" and \"Peripheral\" was the following:
+
+
+PREFIX fschema: <https://w3id.org/framester/schema/>
+SELECT DISTINCT ?corefe ?etfe ?perife
+WHERE {
+{
+?frame1 fn15schema:hasFrameElement ?corefe .
+?corefe <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Core\"^^xsd:string .
+FILTER(regex(?corefe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?frame2 fn15schema:hasFrameElement ?etfe .
+?etfe <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Extra-Thematic\"^^xsd:string .
+FILTER(regex(?etfe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?frame3 fn15schema:hasFrameElement ?perife .
+?perife <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Peripheral\"^^xsd:string .
+FILTER(regex(?perife, \"__insert_variable__\", \"i\"))
+}
+}
+
+Note that the slot of the FILTER keyword in which you find \"__insert_variable__\" was filled sistematically by any lexical unit of the same WordNet synset and WordNet hyponym of the lexical unit used to name the image schema or necessary spatial primitive composing the image schema, in order to find the highest amount possible of results.""" ;
+	rdfs:comment "Some Frame Element Core to some Frame activates some Spatial Primitive of the Image Schema which is activated by the Frame itself." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#extraThematicSPActivation
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#extraThematicSPActivation> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> ;
+	rdfs:range :SpatialPrimitive ;
+	<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#operationalizedVia> """The query to retrieve all the frame elements of type \"Core\", \"Extra-thematic\" and \"Peripheral\" was the following:
+
+
+PREFIX fschema: <https://w3id.org/framester/schema/>
+SELECT DISTINCT ?corefe ?etfe ?perife
+WHERE {
+{
+?frame1 fn15schema:hasFrameElement ?corefe .
+?corefe <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Core\"^^xsd:string .
+FILTER(regex(?corefe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?frame2 fn15schema:hasFrameElement ?etfe .
+?etfe <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Extra-Thematic\"^^xsd:string .
+FILTER(regex(?etfe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?frame3 fn15schema:hasFrameElement ?perife .
+?perife <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Peripheral\"^^xsd:string .
+FILTER(regex(?perife, \"__insert_variable__\", \"i\"))
+}
+}
+
+Note that the slot of the FILTER keyword in which you find \"__insert_variable__\" was filled sistematically by any lexical unit of the same WordNet synset and WordNet hyponym of the lexical unit used to name the image schema or necessary spatial primitive composing the image schema, in order to find the highest amount possible of results.""" ;
+	rdfs:comment "Some Frame Element Extra-Thematic to some Frame activates some Spatial Primitive of the Image Schema which is activated by the Frame itself." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#gestalticActivation
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#gestalticActivation> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> ;
+	rdfs:range :ImageSchema ;
+	owl:propertyChainAxiom _:genid47 .
+
+_:genid47 a rdf:List ;
+	rdf:first <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#coreSPActivation> ;
+	rdf:rest _:genid46 .
+
+_:genid46 a rdf:List ;
+	rdf:first :necessarySPFor ;
+	rdf:rest rdf:nil .
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#gestalticActivation> owl:propertyChainAxiom _:genid49 .
+
+_:genid49 a rdf:List ;
+	rdf:first <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#extraThematicSPActivation> ;
+	rdf:rest _:genid48 .
+
+_:genid48 a rdf:List ;
+	rdf:first :necessarySPFor ;
+	rdf:rest rdf:nil .
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#gestalticActivation> owl:propertyChainAxiom _:genid51 .
+
+_:genid51 a rdf:List ;
+	rdf:first <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#lexicalSenseActivation> ;
+	rdf:rest _:genid50 .
+
+_:genid50 a rdf:List ;
+	rdf:first :necessarySPFor ;
+	rdf:rest rdf:nil .
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#gestalticActivation> owl:propertyChainAxiom _:genid53 .
+
+_:genid53 a rdf:List ;
+	rdf:first <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#peripheralSPActivation> ;
+	rdf:rest _:genid52 .
+
+_:genid52 a rdf:List ;
+	rdf:first :necessarySPFor ;
+	rdf:rest rdf:nil .
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#gestalticActivation> owl:propertyChainAxiom _:genid55 .
+
+_:genid55 a rdf:List ;
+	rdf:first <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#semanticRoleActivation> ;
+	rdf:rest _:genid54 .
+
+_:genid54 a rdf:List ;
+	rdf:first :necessarySPFor ;
+	rdf:rest rdf:nil .
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#gestalticActivation> rdfs:comment "This property is used to infer the activation of a whole image schema via the activation also of a single of its primitives. In fact, since image schemas are gestaltic entities their meaning could be understood - and they can semantically realize only - as a whole. It seemed reasonable to declare the focus of the activation of e.g. a single spatial primitive and then to use a property chain to refer to the activation of the image schema which uses that spatial primitive, insted of flatten all the information with a single object property \"activates\" which would have not satisfied the complexity of the structure." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#lexicalSenseActivation
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#lexicalSenseActivation> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> ;
+	rdfs:range _:genid56 .
+
+_:genid56 a owl:Class ;
+	owl:unionOf _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid57 .
+
+_:genid57 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#lexicalSenseActivation> <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#operationalizedVia> """The query to operationalize this property was the following:
+
+
+SELECT DISTINCT ?framestersyn ?wnsyn
+WHERE { ?fsframe owl:sameAs <__insert_variable__> . 
+?fsframe <https://w3id.org/framester/schema/subsumes> ?framestersyn .
+?framestersyn a <https://w3id.org/framester/schema/WnSynsetFrame> ;
+<https://w3id.org/framester/schema/unaryProjection> ?wnsyn .
+}
+
+Note that the slot \"__insert_variable__\" was systematically filled with FrameNet frames (important that they are FrameNet frames and not Framester frames, because the syntax is different e.g. camel case vs underscore), in particular they are all the FrameNet frames declared as activators of the image schema.
+
+The query retrieves all WordNet synsets and all Framester frame synsets (namely \"Frames evoked by any (sense of a) word from a collection of words characterized by equivalent senses\") and the ratio behind it is: if a frame activates some image schema, and if some synset evokes some frame, then that synset should be activating the image schema too (with its own subproperty).""" ;
+	rdfs:comment "Some Synset is activator of some Image Schema for its being the trigger for some Framester frame, which in turn activates the image schema." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#peripheralSPActivation
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#peripheralSPActivation> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> ;
+	rdfs:range :SpatialPrimitive ;
+	<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#operationalizedVia> """The query to retrieve all the frame elements of type \"Core\", \"Extra-thematic\" and \"Peripheral\" was the following:
+
+
+PREFIX fschema: <https://w3id.org/framester/schema/>
+SELECT DISTINCT ?corefe ?etfe ?perife
+WHERE {
+{
+?frame1 fn15schema:hasFrameElement ?corefe .
+?corefe <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Core\"^^xsd:string .
+FILTER(regex(?corefe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?frame2 fn15schema:hasFrameElement ?etfe .
+?etfe <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Extra-Thematic\"^^xsd:string .
+FILTER(regex(?etfe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?frame3 fn15schema:hasFrameElement ?perife .
+?perife <https://w3id.org/framester/framenet/tbox/FE_coreType> \"Peripheral\"^^xsd:string .
+FILTER(regex(?perife, \"__insert_variable__\", \"i\"))
+}
+}
+
+Note that the slot of the FILTER keyword in which you find \"__insert_variable__\" was filled sistematically by any lexical unit of the same WordNet synset and WordNet hyponym of the lexical unit used to name the image schema or necessary spatial primitive composing the image schema, in order to find the highest amount possible of results.""" ;
+	rdfs:comment "Some Frame Element Peripheral to some Frame activates some Spatial Primitive of the Image Schema which is activated by the Frame itself." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#semTypeActivation
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#semTypeActivation> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> ;
+	rdfs:range _:genid59 .
+
+_:genid59 a owl:Class ;
+	owl:unionOf _:genid61 .
+
+_:genid61 a rdf:List ;
+	rdf:first :ImageSchema ;
+	rdf:rest _:genid60 .
+
+_:genid60 a rdf:List ;
+	rdf:first :SpatialPrimitive ;
+	rdf:rest rdf:nil .
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#semTypeActivation> <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#operationalizedVia> """The query to retrieve all the semantic types from Framester is the following:
+
+SELECT DISTINCT ?semanticType
+WHERE 
+{
+?semanticType a <https://w3id.org/framester/framenet/tbox/SemType> .
+}
+
+
+After manually selecting an interesting semantic type then the following query could be performed:
+
+
+SELECT DISTINCT ?entity
+WHERE {
+
+?entity <https://w3id.org/framester/framenet/tbox/hasSemType> ?semanticType .
+
+#FILTER(regex(?x, \"__insert_variable__\", \"i\")) 
+}
+
+
+Note that the variable ?semanticType should be replaced with the desired semantic type from the list retrieved by the previous query, and the \"__insert_variable__\" slot could be filled with a lexical unit from the synset of the imaeg schema name (+ hyponyms).""" ;
+	rdfs:comment "Some Entity activates some Image Schema according to its Semantic Type in Framester." .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isnet.owl#semanticRoleActivation
+
+<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#semanticRoleActivation> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#activates> ;
+	rdfs:range :SpatialPrimitive ;
+	<http://www.ontologydesignpatterns.org/ont/is/isnet.owl#operationalizedVia> """The query used to retrieve all the general semantic roles (namely Verbnet Arguments, FrameNet Frame Elements and Generic Frame Elements, Framester Generic Roles, VerbNet Generic Arguments, WordNet Trope Roles and Framester Semantic Roles) activating some image schema is the following:
+
+
+SELECT DISTINCT ?argument ?fe ?gfe ?genRole ?genArg ?tropeRole ?semRole
+{
+GRAPH ?g {
+{
+?argument a <https://w3id.org/framester/vn/schema/Argument>.
+FILTER(regex(?argument, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?fe a <https://w3id.org/framester/framenet/tbox/FrameElement> .
+FILTER(regex(?fe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?gfe a <https://w3id.org/framester/framenet/tbox/GenericFE> .
+FILTER(regex(?gfe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?genRole a <https://w3id.org/framester/schema/GenericRole> .
+FILTER(regex(?genRole, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?genArg a <https://w3id.org/framester/vn/schema/GenericArgument> .
+FILTER(regex(?genArg, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?tropeRole a <https://w3id.org/framester/wn/wn30/wordnet-verbnountropes/TropeRole> .
+FILTER(regex(?tropeRole, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?semRole a <https://w3id.org/framester/schema/semanticRole> .
+FILTER(regex(?semRole, \"__insert_variable__\", \"i\"))
+}
+}
+}
+
+Note that the slot of the FILTER keyword in which you find \"__insert_variable__\" was filled sistematically by any lexical unit of the same WordNet synset and WordNet hyponym of the lexical unit used to name the image schema or necessary spatial primitive composing the image schema, in order to find the highest amount possible of results.
+
+While the query to retrieve every semantic role (not only general) is the following:
+
+SELECT DISTINCT ?x ?coreRole ?y ?arg ?z ?fe ?k ?role ?s ?necRole ?q ?optRole ?r ?vnRole
+{
+GRAPH ?g {
+{
+?x <https://w3id.org/framester/schema/coreRole> ?coreRole .
+FILTER(regex(?coreRole, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?y <https://w3id.org/framester/vn/schema/hasArgument> ?arg .
+FILTER(regex(?arg, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?z <https://w3id.org/framester/framenet/tbox/hasFrameElement> ?fe .
+FILTER(regex(?fe, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?k <https://w3id.org/framester/pb/pbschema/hasRole> ?role .
+FILTER(regex(?role, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?s <https://w3id.org/framester/schema/necessaryRole> ?necRole .
+FILTER(regex(?necRole, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?q <https://w3id.org/framester/schema/optionalRole> ?optRole .
+FILTER(regex(?optRole, \"__insert_variable__\", \"i\"))
+}
+UNION
+{
+?r <https://w3id.org/framester/schema/vnRole> ?vnRole .
+FILTER(regex(?vnRole, \"__insert_variable__\", \"i\"))
+}
+}
+}
+
+The \"__insert_variable__\" slot was systematically filled as already mentioned.""" ;
+	rdfs:comment "Some semantic role from Framester resource (including VerbNet roles, WordNet trope roles, FrameNet frame elements and Framester semantic roles) activates some spatial primitives." .
+# 
+# https://w3id.org/framester/schema/hasPerspective
+
+fschema:hasPerspective a owl:ObjectProperty .
+# 
+# https://w3id.org/framester/schema/necessaryRole
+
+fschema:necessaryRole a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/ont/is/exuviae.owl#EpistemicComparison
+
+exu:EpistemicComparison a owl:Class .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#GestaltStructure
+
+:GestaltStructure a owl:Class ;
+	rdfs:subClassOf fschema:Frame .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IS_Combination
+
+:IS_Combination a owl:Class ;
+	rdfs:subClassOf fschema:Frame .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IS_Family
+
+:IS_Family a owl:Class ;
+	rdfs:subClassOf dul:Collection .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IS_Form
+
+:IS_Form a owl:Class ;
+	rdfs:subClassOf dul:Quality .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IS_Profile
+
+:IS_Profile a owl:Class ;
+	rdfs:subClassOf dul:Collection .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#ImageSchema
+
+:ImageSchema a owl:Class ;
+	rdfs:subClassOf :GestaltStructure , _:genid62 .
+
+_:genid62 a owl:Restriction ;
+	owl:onProperty fschema:necessaryRole ;
+	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+	owl:onClass :SpatialPrimitive .
+
+:ImageSchema exu:bibRef """\"Image schemas represent the abstract generalisations learned from the sensorimotor processes. They are conceptual gestalts, meaning that each part is essential for the whole meaning of the image schema, and most often they are described as capturing sensorimotor relationships and their transformations.\"
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" , """\"Image schemas, on the other hand, are spatiotemporal relationships used in cognitive science as building blocks to conceptualise objects and events on a high level of abstraction.\"
+(Hedblom, M. M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019. Image schema combinations and complex events.)""" .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SchematicIntegration
+
+:SchematicIntegration a owl:Class ;
+	rdfs:subClassOf fschema:Frame .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SpatialPrimitive
+
+:SpatialPrimitive a owl:Class ;
+	rdfs:subClassOf fschema:SemanticRole .
+# 
+# https://w3id.org/framester/schema/Frame
+
+fschema:Frame a owl:Class .
+# 
+# https://w3id.org/framester/schema/SemanticRole
+
+fschema:SemanticRole a owl:Class .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#BLOCKAGE
+
+:BLOCKAGE a owl:NamedIndividual , :ImageSchema ;
+	:hasSequenceElement :CONTACT , :OBJECT , :SOURCE_PATH_GOAL ;
+	:necessarySP :BLOCKED , :BLOCKER .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#BLOCKED
+
+:BLOCKED a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#BLOCKER
+
+:BLOCKER a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CENTER
+
+:CENTER a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CENTER_PERIPHERY
+
+:CENTER_PERIPHERY a owl:NamedIndividual , :ImageSchema ;
+	:hasForm :Static ;
+	:necessarySP :CENTER , :PERIPHERY .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CLOSED_PATH_MOVEMENT
+
+:CLOSED_PATH_MOVEMENT a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :PATH_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CONTACT
+
+:CONTACT a owl:NamedIndividual , :ImageSchema .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CONTAINED_INSIDE
+
+:CONTAINED_INSIDE a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :CONTAINMENT_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CONTAINER
+
+:CONTAINER a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CONTAINMENT
+
+:CONTAINMENT a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :CONTAINMENT_Family ;
+	:hasForm :Static ;
+	:makesUseOf :GOING_IN , :GOING_OUT , :GOING_THROUGH , :IN , :OBJECT , :OUT ;
+	:necessarySP :CONTAINER , :INSIDE .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CONTAINMENT_Family
+
+:CONTAINMENT_Family a owl:NamedIndividual , :IS_Family ;
+	:groups :CONTAINER , :IN , :OBJECT , :OPENING , :OUT , :THROUGH .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CROSSING_OPENING
+
+:CROSSING_OPENING a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :CONTAINMENT_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#CYCLE
+
+:CYCLE a owl:NamedIndividual , :ImageSchema .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#Collection
+
+:Collection a owl:NamedIndividual , :IS_Combination .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#Dynamic
+
+:Dynamic a owl:NamedIndividual , :IS_Form .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#EMOTION
+
+:EMOTION a owl:NamedIndividual , :SchematicIntegration .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#FOCAL_POINT
+
+:FOCAL_POINT a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#FORCE
+
+:FORCE a owl:NamedIndividual , :SchematicIntegration .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#GOAL
+
+:GOAL a owl:NamedIndividual , :SpatialPrimitive ;
+	:groupedInFamily :PATH_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#GOING_IN
+
+:GOING_IN a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :CONTAINMENT_Family ;
+	:intersectionResultOf :CONTAINMENT , :SOURCE_PATH_GOAL ;
+	:isDynamicFormFor :IN .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#GOING_OUT
+
+:GOING_OUT a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :CONTAINMENT_Family ;
+	:isDynamicFormFor :OUT .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#GOING_THROUGH
+
+:GOING_THROUGH a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :CONTAINMENT_Family ;
+	:hasForm :Dynamic ;
+	:isDynamicFormFor :THROUGH .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#GestaltStructure
+
+:GestaltStructure a owl:NamedIndividual , fschema:OntologyClass ;
+	exu:epistemicallyDerivedFrom isexu:GestaltStructureEvaluation .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IN
+
+:IN a owl:NamedIndividual , :SpatialPrimitive ;
+	:hasForm :Static .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#INSIDE
+
+:INSIDE a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IS_Combination
+
+:IS_Combination a owl:NamedIndividual , fschema:OntologyClass ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IS_Family
+
+:IS_Family a owl:NamedIndividual , fschema:OntologyClass ;
+	exu:epistemicallyDerivedFrom isexu:ISGroupingComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IS_Form
+
+:IS_Form a owl:NamedIndividual , fschema:OntologyClass ;
+	exu:epistemicallyDerivedFrom isexu:ISQualityComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#IS_Profile
+
+:IS_Profile a owl:NamedIndividual , fschema:OntologyClass ;
+	exu:epistemicallyDerivedFrom isexu:ISGroupingComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#ISfamilyIntersectionWith
+
+:ISfamilyIntersectionWith a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#ISprofile
+
+:ISprofile a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISGroupingComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#LANDMARK
+
+:LANDMARK a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#LINK
+
+:LINK a owl:NamedIndividual , :ImageSchema ;
+	:hasForm :Static .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#LINKED_PATH
+
+:LINKED_PATH a owl:NamedIndividual , :ImageSchema ;
+	:hasForm :Dynamic ;
+	:hasMergingElement :LINK , :SOURCE_PATH_GOAL .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#MOVEMENT_ALONG_A_PATH
+
+:MOVEMENT_ALONG_A_PATH a owl:NamedIndividual , :ImageSchema ;
+	:fineTuningFor :MOVEMENT_OF_AN_OBJECT ;
+	:groupedInFamily :PATH_Family ;
+	:makesUseOf :PATH .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#MOVEMENT_IN_LOOPS
+
+:MOVEMENT_IN_LOOPS a owl:NamedIndividual , :ImageSchema ;
+	:fineTuningFor :MOVEMENT_ALONG_A_PATH .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#MOVEMENT_OF_AN_OBJECT
+
+:MOVEMENT_OF_AN_OBJECT a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :PATH_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#Merge
+
+:Merge a owl:NamedIndividual , :IS_Combination .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#OBJECT
+
+:OBJECT a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#ON_PATH_FROM
+
+:ON_PATH_FROM a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :CONTAINMENT_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#ON_PATH_TOWARD
+
+:ON_PATH_TOWARD a owl:NamedIndividual , :ImageSchema ;
+	:groupedInFamily :CONTAINMENT_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#OPENING
+
+:OPENING a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#OUT
+
+:OUT a owl:NamedIndividual , :SpatialPrimitive ;
+	:hasForm :Static .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#OUTSIDE
+
+:OUTSIDE a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#PART
+
+:PART a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#PART_WHOLE
+
+:PART_WHOLE a owl:NamedIndividual , :ImageSchema ;
+	:makesUseOf :PART , :WHOLE .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#PATH
+
+:PATH a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#PATH_Family
+
+:PATH_Family a owl:NamedIndividual , :IS_Family ;
+	:groups :OBJECT , :PATH .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#PATH_TO_GOAL
+
+:PATH_TO_GOAL a owl:NamedIndividual , :ImageSchema ;
+	:fineTuningFor :MOVEMENT_ALONG_A_PATH ;
+	:groupedInFamily :PATH_Family ;
+	:makesUseOf :GOAL .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#PERIPHERY
+
+:PERIPHERY a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#REVOLVING_MOVEMENT
+
+:REVOLVING_MOVEMENT a owl:NamedIndividual , :ImageSchema ;
+	:fineTuningFor :MOVEMENT_IN_LOOPS ;
+	:groupedInFamily :PATH_Family ;
+	:hasForm :Dynamic ;
+	:isDynamicFormFor :CENTER_PERIPHERY ;
+	:makesUseOf :FOCAL_POINT ;
+	:movementTypeFrom :CYCLE ;
+	:spatialOrganizationFrom :CENTER_PERIPHERY .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SCALE
+
+:SCALE a owl:NamedIndividual , :ImageSchema .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SOURCE
+
+:SOURCE a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SOURCE_PATH
+
+:SOURCE_PATH a owl:NamedIndividual , :ImageSchema ;
+	:fineTuningFor :MOVEMENT_ALONG_A_PATH ;
+	:groupedInFamily :PATH_Family ;
+	:makesUseOf :SOURCE .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SOURCE_PATH_GOAL
+
+:SOURCE_PATH_GOAL a owl:NamedIndividual , :ImageSchema ;
+	:fineTuningFor :PATH_TO_GOAL , :SOURCE_PATH ;
+	:groupedInFamily :PATH_Family ;
+	:makesUseOf :LANDMARK ;
+	:necessarySP :GOAL , :PATH , :SOURCE .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SOURCE_PATH_VIA_GOAL
+
+:SOURCE_PATH_VIA_GOAL a owl:NamedIndividual , :ImageSchema ;
+	:fineTuningFor :SOURCE_PATH_GOAL ;
+	:groupedInFamily :PATH_Family .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SPLITTING
+
+:SPLITTING a owl:NamedIndividual , :ImageSchema ;
+	:makesUseOf :PART , :WHOLE .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SUPPORT
+
+:SUPPORT a owl:NamedIndividual , :ImageSchema ;
+	:necessarySP :SUPPORTED , :SUPPORTER .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SUPPORTED
+
+:SUPPORTED a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SUPPORTER
+
+:SUPPORTER a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SchematicIntegration
+
+:SchematicIntegration a owl:NamedIndividual , fschema:OntologyClass ;
+	exu:epistemicallyDerivedFrom isexu:SchematicIntegrationEvaluation .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#Sequence
+
+:Sequence a owl:NamedIndividual , :IS_Combination .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#SpatialPrimitive
+
+:SpatialPrimitive a owl:NamedIndividual , fschema:OntologyClass ;
+	exu:epistemicallyDerivedFrom isexu:ISComponentComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#Static
+
+:Static a owl:NamedIndividual , :IS_Form .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#THROUGH
+
+:THROUGH a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#VERTICALITY
+
+:VERTICALITY a owl:NamedIndividual , :ImageSchema .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#WHOLE
+
+:WHOLE a owl:NamedIndividual , :SpatialPrimitive .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#combinationType
+
+:combinationType a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#combinesWith
+
+:combinesWith a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#fineTuningFor
+
+:fineTuningFor a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISQualityComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#groupedInFamily
+
+:groupedInFamily a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISGroupingComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#groups
+
+:groups a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISGroupingComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasCollectionElement
+
+:hasCollectionElement a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasCombinationElement
+
+:hasCombinationElement a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasForm
+
+:hasForm a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISQualityComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasMergingElement
+
+:hasMergingElement a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasSequenceElement
+
+:hasSequenceElement a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#hasSpatialInput
+
+:hasSpatialInput a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#intersectionResultOf
+
+:intersectionResultOf a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isDynamicFormFor
+
+:isDynamicFormFor a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISQualityComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isStaticFormFor
+
+:isStaticFormFor a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISQualityComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isTopologyProviderFor
+
+:isTopologyProviderFor a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#isUsedBy
+
+:isUsedBy a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#makesUseOf
+
+:makesUseOf a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#movementTypeFrom
+
+:movementTypeFrom a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISQualityComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#profileParticipant
+
+:profileParticipant a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISGroupingComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#spatialOrganizationFrom
+
+:spatialOrganizationFrom a owl:NamedIndividual , fschema:OntologyProperty ;
+	exu:epistemicallyDerivedFrom isexu:ISCombinationComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#GestaltStructureEvaluation
+
+isexu:GestaltStructureEvaluation a owl:NamedIndividual , exu:HapaxLegomenonEvaluation .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISCombinationComparison
+
+isexu:ISCombinationComparison a owl:NamedIndividual , exu:EpistemicComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISComponentComparison
+
+isexu:ISComponentComparison a owl:NamedIndividual , exu:EpistemicComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISGroupingComparison
+
+isexu:ISGroupingComparison a owl:NamedIndividual , exu:EpistemicComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ISQualityComparison
+
+isexu:ISQualityComparison a owl:NamedIndividual , exu:EpistemicComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#ImageSchemaComparison
+
+isexu:ImageSchemaComparison a owl:NamedIndividual , exu:EpistemicComparison .
+# 
+# http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl#SchematicIntegrationEvaluation
+
+isexu:SchematicIntegrationEvaluation a owl:NamedIndividual , exu:HapaxLegomenonEvaluation .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+:GestaltStructure exu:bibRef """\"Gestalts, in the sense I am using the term, are not unanalyzable givens or atomistic structures . They can be \"analyzed\" since they have parts and dimensions. But, any such attempted reduction will destroy the unity (the meaningful organization) that made the structure significant in the first place.\"
+
+Johnson M., The Body in the Mind, University of Chicago Press, 1987 chap 3, p.62""" .
+# 
+
+:IS_Combination exu:bibRef """\"While these forms of combinations capture some of the most apparent combinations of image schemas, they are by no means intended to be exhaustive. Other combinations, or even combinations of these combinations, are possible to exist\"
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" .
+# 
+
+:IS_Family exu:bibRef """\"similar image schemas can be grouped together into ‘families’ represented as graphs of theories with increasing complexity.\"
+(Hedblom, M. M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019. Image schema combinations and complex events.)""" , "Image schemas consist of different “parts”; “These ‘parts’ can either be removed or added while still capturing the same basic image schema, generating what can be described as an imageschema ‘family’.” (Hedblom et al. 2015: 23)" .
+# 
+
+:IS_Form exu:bibRef """The Static or Dynamic Form of an Image Schema.
+
+(Maria M. Hedblom, Dagmar Gromann, and Oliver Kutz. 2018.)""" .
+# 
+
+:IS_Profile exu:bibRef """\"groupings of image schemas that capture the spatiotemporal relationships related to particular events.\"
+(Todd Oakley. Image schema. In Dirk Geeraerts and Hubert Cuyckens, editors, The Oxford Handbook of Cognitive Linguistics, pages 214–235. Oxford University Press, 2010.)
+
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" .
+# 
+
+:ISfamilyIntersectionWith rdfs:comment """The relation for two or more Image Schema family intersection being the consequence of two or more Image Schemas intersection.
+(Hedblom, M. M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019. Image schema combinations and complex events.)""" .
+# 
+
+:ISprofile rdfs:comment "This property links some Concept or Event to its Image Schema Profile - namely to all the Spatial Schemas that are used in the conceptualizing process of that Concept or Event." .
+# 
+
+:SchematicIntegration exu:bibRef """\"The enriched spatial concept that results from blending a spatial event with a non-spatial component.\"
+(Mandler & Pagán Cánovas 2014)""" , """\"schematic integrations use the first two types (Spatial Primitives and Image Schemas) to build concepts that include non-spatial elements, such as force and emotion.
+(Mandler & Pagán Cánovas 2014: 1)""" , """\"The first conceptual representations to include non-spatial elements, by projecting feelings or non-spatial perceptions to blends structured by image schemas.\"
+(Mandler & Pagán Cánovas 2014)""" .
+# 
+
+:SpatialPrimitive exu:bibRef """“Spatial primitives are the first conceptual building blocks formed in infancy”
+
+(Mandler & Pagán Cánovas 2014: 1)""" .
+# 
+
+:combinationType rdfs:comment """The type of combination of the Image Schema.
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" .
+# 
+
+:combinesWith rdfs:comment """The relation from one Image Schema combining with another one.
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" .
+# 
+
+:fineTuningFor exu:bibRef """This property expresses the climatic complexity of Image Schemas through the use of one or more Spatial Primitives. Some more basic Image Schemas use just one or few Spatial Primitives, while more complex Image Schemas are \"fine tuning\" for the more basic ones, since they are more specialised and articulated in their compositional structure and meaning.
+(Hedblom et al. 2015)""" .
+# 
+
+:groupedInFamily rdfs:comment """The Image Schema Family to which a Spatial Schema pertains.
+(Hedblom et al. 2015)""" .
+# 
+
+:groups rdfs:comment """The grouping relation having as domain an Image Schema Family and as range a Spatial Primitive or a Spatial Schema.
+(Hedblom et al. 2015)""" .
+# 
+
+:hasCollectionElement rdfs:comment """The relation from the Image Schema being the result of a Collection combination.
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" .
+# 
+
+:hasCombinationElement exu:bibRef """The relation from the Image Schema being the result of some type of combination, namely Collection, Merging or Sequence.
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" .
+# 
+
+:hasForm rdfs:comment """The relation for the Static or Dynamic form of an Image Schema.
+(Maria M. Hedblom, Dagmar Gromann, and Oliver Kutz. 2018.)""" .
+# 
+
+:hasMergingElement rdfs:comment """The relation from the Image Schema being the result of a Merge combination.
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" .
+# 
+
+:hasSequenceElement rdfs:comment """The relation from the Image Schema being the result of a Sequence combination.
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)
+(Hedblom, M. M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019. Image schema combinations and complex events.)""" .
+# 
+
+:hasSpatialInput exu:bibRef """\"This process is similar to what is called a s i m p l e x n e t w o r k in
+Conceptual Integration Theory (Fauconnier & Turner, 2002, pp. 121−122). In a simplex network, an unstructured element becomes blended with a structured input space. In the resulting blend, the unstructured element assumes a relevant role within the organizing frame imported from the structured input space.\"
+(Mandler & Pagán Cánovas 2014)""" .
+# 
+
+:intersectionResultOf rdfs:comment """Some Image Schemas are the result of the intersection of other Image Schemas. e.g. GOING_IN is the result of SOURCE_PATH_GOAL and CONTAINMENT.
+(Hedblom, M. M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019. Image schema combinations and complex events.)""" .
+# 
+
+:isDynamicFormFor rdfs:comment """The relation between two Image Schemas, one being the Dynamic form for the other.
+(Maria M. Hedblom, Dagmar Gromann, and Oliver Kutz. 2018.)""" .
+# 
+
+:isStaticFormFor rdfs:comment """The relation between two Image Schemas, one being the Static form for the other.
+(Maria M. Hedblom, Dagmar Gromann, and Oliver Kutz. 201""" .
+# 
+
+:isTopologyProviderFor exu:bibRef """\"This process is similar to what is called a s i m p l e x n e t w o r k in
+Conceptual Integration Theory (Fauconnier & Turner, 2002, pp. 121−122). In a simplex network, an unstructured element becomes blended with a structured input space. In the resulting blend, the unstructured element assumes a relevant role within the organizing frame imported from the structured input space.\"
+(Mandler & Pagán Cánovas 2014)""" .
+# 
+
+:makesUseOf rdfs:comment """The relation of usage from one Image Schema to another Image Schema or Spatial Primitive.
+The \"using\" relation is a wide property that could include part-like notions, perspectivization, reusage and other kind of dependancies.""" .
+# 
+
+:movementTypeFrom rdfs:comment """This property states that one Image Schema inherits the \"type of movement\" e.g. in CYCLE, straight to a goal as in PATH_TO_GOAL etc. from another Image Schema.
+(Hedblom, M. M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019. Image schema combinations and complex events.)""" .
+# 
+
+:profileParticipant rdfs:comment """Some concepts can be conceptualized as built from a collection of Image Schemas, this collection is called \"Profile\".
+(Hedblom, M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019)""" .
+# 
+
+:spatialOrganizationFrom rdfs:comment """This property states that one Image Schema inherits the \"spatial organization\" e.g. in CENTER_PERIPHERY from another Image Schema.
+(Hedblom, M. M., Kutz, O., Peñaloza, R., & Guizzardi, G. 2019. Image schema combinations and complex events.)""" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+
+:x a swrl:Variable .
+
+:y a swrl:Variable .
+
+:z a swrl:Variable .
+
+:k a swrl:Variable .
+
+:h a swrl:Variable .
+
+_:genid104 swrla:isRuleEnabled "true"^^xsd:boolean ;
+	rdfs:comment "This rule state that if something hasForm Static and isStaticForm for something else, then this something hasForm Dynamic."^^xsd:string ;
+	rdfs:label "S2"^^xsd:string ;
+	a swrl:Imp ;
+	swrl:body _:genid107 .
+
+_:genid107 a swrl:AtomList ;
+	rdf:first _:genid108 .
+
+_:genid108 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :isStaticFormFor ;
+	swrl:argument1 :x ;
+	swrl:argument2 :y .
+
+_:genid107 rdf:rest _:genid105 .
+
+_:genid105 a swrl:AtomList ;
+	rdf:first _:genid106 .
+
+_:genid106 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasForm ;
+	swrl:argument1 :x ;
+	swrl:argument2 :Static .
+
+_:genid105 rdf:rest rdf:nil .
+
+_:genid104 swrl:head _:genid109 .
+
+_:genid109 a swrl:AtomList ;
+	rdf:first _:genid110 .
+
+_:genid110 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasForm ;
+	swrl:argument1 :y ;
+	swrl:argument2 :Dynamic .
+
+_:genid109 rdf:rest rdf:nil .
+
+_:genid111 swrla:isRuleEnabled "true"^^xsd:boolean ;
+	rdfs:comment "This rule state that if something is linked to something else via the object property hedblomis:hasMergingElement, then its combinationType is heblomis:Merge."^^xsd:string ;
+	rdfs:label "S4"^^xsd:string ;
+	a swrl:Imp ;
+	swrl:body _:genid112 .
+
+_:genid112 a swrl:AtomList ;
+	rdf:first _:genid113 .
+
+_:genid113 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasMergingElement ;
+	swrl:argument1 :x ;
+	swrl:argument2 :y .
+
+_:genid112 rdf:rest rdf:nil .
+
+_:genid111 swrl:head _:genid114 .
+
+_:genid114 a swrl:AtomList ;
+	rdf:first _:genid115 .
+
+_:genid115 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :combinationType ;
+	swrl:argument1 :x ;
+	swrl:argument2 :Merge .
+
+_:genid114 rdf:rest rdf:nil .
+
+_:genid116 swrla:isRuleEnabled "true"^^xsd:boolean ;
+	rdfs:comment "This rule state that if something is linked to something else via the object property hedblomis:hasSequenceElement, then its combinationType is heblomis:Sequence."^^xsd:string ;
+	rdfs:label "S6"^^xsd:string ;
+	a swrl:Imp ;
+	swrl:body _:genid117 .
+
+_:genid117 a swrl:AtomList ;
+	rdf:first _:genid118 .
+
+_:genid118 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasSequenceElement ;
+	swrl:argument1 :x ;
+	swrl:argument2 :y .
+
+_:genid117 rdf:rest rdf:nil .
+
+_:genid116 swrl:head _:genid119 .
+
+_:genid119 a swrl:AtomList ;
+	rdf:first _:genid120 .
+
+_:genid120 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :combinationType ;
+	swrl:argument1 :x ;
+	swrl:argument2 :Sequence .
+
+_:genid119 rdf:rest rdf:nil .
+
+_:genid63 swrla:isRuleEnabled "true"^^xsd:boolean ;
+	rdfs:comment "This rule is used to infer that if some Image Schema is grouped in some Family and combines with some other Image Schema, which is grouped is some other Family, then the two Image Schema Families have an intersection."^^xsd:string ;
+	rdfs:label "S8"^^xsd:string ;
+	a swrl:Imp ;
+	swrl:body _:genid72 .
+
+_:genid72 a swrl:AtomList ;
+	rdf:first _:genid73 .
+
+_:genid73 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :groupedInFamily ;
+	swrl:argument1 :x ;
+	swrl:argument2 :y .
+
+_:genid72 rdf:rest _:genid70 .
+
+_:genid70 a swrl:AtomList ;
+	rdf:first _:genid71 .
+
+_:genid71 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :groupedInFamily ;
+	swrl:argument1 :z ;
+	swrl:argument2 :k .
+
+_:genid70 rdf:rest _:genid68 .
+
+_:genid68 a swrl:AtomList ;
+	rdf:first _:genid69 .
+
+_:genid69 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasMergingElement ;
+	swrl:argument1 :h ;
+	swrl:argument2 :x .
+
+_:genid68 rdf:rest _:genid66 .
+
+_:genid66 a swrl:AtomList ;
+	rdf:first _:genid67 .
+
+_:genid67 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :combinationType ;
+	swrl:argument1 :h ;
+	swrl:argument2 :Merge .
+
+_:genid66 rdf:rest _:genid64 .
+
+_:genid64 a swrl:AtomList ;
+	rdf:first _:genid65 .
+
+_:genid65 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :combinesWith ;
+	swrl:argument1 :x ;
+	swrl:argument2 :z .
+
+_:genid64 rdf:rest rdf:nil .
+
+_:genid63 swrl:head _:genid74 .
+
+_:genid74 a swrl:AtomList ;
+	rdf:first _:genid75 .
+
+_:genid75 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :ISfamilyIntersectionWith ;
+	swrl:argument1 :y ;
+	swrl:argument2 :k .
+
+_:genid74 rdf:rest rdf:nil .
+
+_:genid76 swrla:isRuleEnabled "true"^^xsd:boolean ;
+	rdfs:comment "This rule allows the inheritance of spatial primitives from an image declared being the FineTuningFor anothe image schema."^^xsd:string ;
+	rdfs:label "S1"^^xsd:string ;
+	a swrl:Imp ;
+	swrl:body _:genid79 .
+
+_:genid79 a swrl:AtomList ;
+	rdf:first _:genid80 .
+
+_:genid80 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :fineTuningFor ;
+	swrl:argument1 :z ;
+	swrl:argument2 :x .
+
+_:genid79 rdf:rest _:genid77 .
+
+_:genid77 a swrl:AtomList ;
+	rdf:first _:genid78 .
+
+_:genid78 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :makesUseOf ;
+	swrl:argument1 :x ;
+	swrl:argument2 :y .
+
+_:genid77 rdf:rest rdf:nil .
+
+_:genid76 swrl:head _:genid81 .
+
+_:genid81 a swrl:AtomList ;
+	rdf:first _:genid82 .
+
+_:genid82 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :makesUseOf ;
+	swrl:argument1 :z ;
+	swrl:argument2 :y .
+
+_:genid81 rdf:rest rdf:nil .
+
+_:genid83 swrla:isRuleEnabled "true"^^xsd:boolean ;
+	rdfs:comment "This rule state that if something is linked to something else via the object property hedblomis:hasCollectionElement, then its combinationType is heblomis:Collection."^^xsd:string ;
+	rdfs:label "S5"^^xsd:string ;
+	a swrl:Imp ;
+	swrl:body _:genid84 .
+
+_:genid84 a swrl:AtomList ;
+	rdf:first _:genid85 .
+
+_:genid85 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasCollectionElement ;
+	swrl:argument1 :x ;
+	swrl:argument2 :y .
+
+_:genid84 rdf:rest rdf:nil .
+
+_:genid83 swrl:head _:genid86 .
+
+_:genid86 a swrl:AtomList ;
+	rdf:first _:genid87 .
+
+_:genid87 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :combinationType ;
+	swrl:argument1 :x ;
+	swrl:argument2 :Collection .
+
+_:genid86 rdf:rest rdf:nil .
+
+_:genid88 swrla:isRuleEnabled "true"^^xsd:boolean ;
+	rdfs:comment "This rule is used to say that if some Image Schema has has combination element two different spatial primitives then there is a relation hedblomis:combinesWith between those two Spatial Primitives."^^xsd:string ;
+	rdfs:label "S7"^^xsd:string ;
+	a swrl:Imp ;
+	swrl:body _:genid93 .
+
+_:genid93 a swrl:AtomList ;
+	rdf:first _:genid94 .
+
+_:genid94 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasCombinationElement ;
+	swrl:argument1 :x ;
+	swrl:argument2 :y .
+
+_:genid93 rdf:rest _:genid91 .
+
+_:genid91 a swrl:AtomList ;
+	rdf:first _:genid92 .
+
+_:genid92 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasCombinationElement ;
+	swrl:argument1 :x ;
+	swrl:argument2 :z .
+
+_:genid91 rdf:rest _:genid89 .
+
+_:genid89 a swrl:AtomList ;
+	rdf:first _:genid90 .
+
+_:genid90 a swrl:DifferentIndividualsAtom ;
+	swrl:argument1 :y ;
+	swrl:argument2 :z .
+
+_:genid89 rdf:rest rdf:nil .
+
+_:genid88 swrl:head _:genid95 .
+
+_:genid95 a swrl:AtomList ;
+	rdf:first _:genid96 .
+
+_:genid96 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :combinesWith ;
+	swrl:argument1 :y ;
+	swrl:argument2 :z .
+
+_:genid95 rdf:rest rdf:nil .
+
+_:genid97 swrla:isRuleEnabled "true"^^xsd:boolean ;
+	rdfs:comment "This rule state that if something hasForm Dynamic and isDynamicForm for something else, then this something hasForm Static."^^xsd:string ;
+	rdfs:label "S3"^^xsd:string ;
+	a swrl:Imp ;
+	swrl:body _:genid100 .
+
+_:genid100 a swrl:AtomList ;
+	rdf:first _:genid101 .
+
+_:genid101 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasForm ;
+	swrl:argument1 :x ;
+	swrl:argument2 :Dynamic .
+
+_:genid100 rdf:rest _:genid98 .
+
+_:genid98 a swrl:AtomList ;
+	rdf:first _:genid99 .
+
+_:genid99 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :isDynamicFormFor ;
+	swrl:argument1 :x ;
+	swrl:argument2 :y .
+
+_:genid98 rdf:rest rdf:nil .
+
+_:genid97 swrl:head _:genid102 .
+
+_:genid102 a swrl:AtomList ;
+	rdf:first _:genid103 .
+
+_:genid103 a swrl:IndividualPropertyAtom ;
+	swrl:propertyPredicate :hasForm ;
+	swrl:argument1 :y ;
+	swrl:argument2 :Static .
+
+_:genid102 rdf:rest rdf:nil .
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
