@@ -9,7 +9,7 @@ WHERE{
       owl:sameAs ?fnframe .
 ?fnframe skos:closeMatch ?syn ; a fn15schema:Frame .
 ?syn wn30schema:senseLabel "insert_variable"@en-us
-} LIMIT 100
+}
 
 
 
