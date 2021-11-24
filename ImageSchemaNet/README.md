@@ -17,7 +17,9 @@ ImageSchemaNet is an ontology that aligns pre-existing resources, such as FrameN
 
 ### Explore the Resource 
 
-Here some useful queries to explore the resource. Enjoy!
+Here some useful queries to explore the resource. <br/>
+The queries can be performed on the [Framester endpoint](http://etna.istc.cnr.it/framester2/sparql) <br/>
+Enjoy! <br/>
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
