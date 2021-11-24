@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#"
+     xml:base="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTACT.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_FORCE_SUPPORT.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_SUPPORT.owl"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_FROM.owl"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_TOWARD.owl"/>
+        <rdfs:comment>Blockage Image Schema.</rdfs:comment>
+        <owl:versionInfo>Version 0.1 - First attempt of modeling Blockage dynamics.
+Designed by Stefano De Giorgis.</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#blockedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#blockedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#forces"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#blocks"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_FROM.owl#onPathFrom"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_TOWARD.owl#onPathToward"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Some Object is blocked by some Object (note that the Blocker and Blocked entity could hypothetically be the same Object) or Region while it was moving towards or from some Source or Goal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#blocks -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#blocks">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#forces"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_FROM.owl#onPathFrom"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_TOWARD.owl#onPathToward"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>Some Object or Region blocks (in some way) some Object which was moving towards or from some source or goal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#a -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#a">
+        <blockedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#b"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#b -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl#b"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
