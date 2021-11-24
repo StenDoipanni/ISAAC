@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_closure.owl#"
+     xml:base="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_closure.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ISL_ATTRACTION_LINK="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_ATTRACTION_LINK.owl#">
+    <owl:Ontology rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_closure.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CLOSED_PATH_MOVEMENT.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_FORCE_SUPPORT.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_GLUE_LINK.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_SOURCE_PATH_VIA_GOAL.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_SUPPORT.owl"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Designed by Stefano De Giorgis and Aldo Gangemi.</rdfs:comment>
+        <rdfs:comment>This is the transitive closure of the import relation for the Image Schema Logic (ISL) network translated from DOL to OWL2.
+ISL reuses RCC8, QCT, and other theories, which are yet to be imported as 
+
+The full expressivity of DOL cannot be attained in OWL2: a &apos;best approximation&apos; is provided in OWL2, typically equivalence axioms for binary relations with intersection or union set builders are reduced to subproperty axioms.
+
+OWL2 sources (or appropriately designed in OWL2 in case they are not available). The reused vocabulary is contained and minimally axiomatised in the GeneralVocabulary module.</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1
+some documentation is still missing</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_ATTRACTION_LINK.owl#forces -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_ATTRACTION_LINK.owl#forces">
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#back -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#back">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_SOURCE_PATH.owl#startingPointFor -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_SOURCE_PATH.owl#startingPointFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object">
+        <rdfs:comment>Any Object.
+
+To be noted: This Object could be = dul:Entity.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Path">
+        <rdfs:comment>A Path from a point to another.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Region">
+        <rdfs:comment>A spatial Region.
+
+To be noted this Region != from dul:Region, this one is specifically a Region of spatial Dimension.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_PATH_GOAL#Goal">
+        <rdfs:comment>The ending point for some Path.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_SOURCE_PATH.owl#Source">
+        <rdfs:comment>The starting point for some Path.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
