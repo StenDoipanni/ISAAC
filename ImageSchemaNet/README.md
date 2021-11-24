@@ -26,16 +26,23 @@ Enjoy! <br/>
 
 Query to ask if some entity is a lexical activator of some spatial primitive which is necessary to the image schemaCONTAINMENT.
 
-ASK <br/>
-?entity isnet:lexicalSenseActivation ?sp .<br/>
-?sp ^isnet:necessarySP isnet:CONTAINMENT .<br/>
 
+```
+PREFIX isnet: <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#> <br/>
+PREFIX isaac: <http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#> <br/>
+ASK { <br/>
+?entity isnet:lexicalSenseActivation isaac:CONTAINMENT .<br/>
+}<br/>
+
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Query to retrieve all the entities, image schemas and spatial primitives for which some entity is a lexical activator of some SP which is a necessary SP to some IS.
 
+```
+PREFIX isnet: <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#> <br/>
 SELECT DISTINCT ?entity ?is ?sp <br/>
 WHERE { <br/>
 ?entity isnet:lexicalSenseActivation ?sp . <br/>
@@ -43,12 +50,15 @@ WHERE { <br/>
 FILTER(regex(?entity, "insert_variable", "i"))  <br/>
 } <br/>
 
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Query to simulate the image-schema-profile extraction starting from a single non disambiguated lexical unit.
 The query can be executed by replacing each "insert_variable" with the same lexical unit.
 
+```
+PREFIX isnet: <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#> <br/>
 CONSTRUCT { [] isnet:ISProfile ?isLex , ?coresp , ?perisp , ?etsp , ?semis, ?rolesp . } <br/>
 WHERE { <br/>
 { ?x1 isnet:lexicalSenseActivation ?isLex . <br/>
@@ -69,3 +79,5 @@ UNION <br/>
 { ?x6 isnet:semanticRoleActivation ?rolesp . <br/>
 FILTER(regex(?x6, "insert_variable", "i")) } <br/>
 } <br/>
+
+```
