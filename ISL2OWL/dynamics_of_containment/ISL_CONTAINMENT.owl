@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#"
+     xml:base="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ISL_General_Vocabulary="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#">
+    <owl:Ontology rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#containedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#containedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#PP"/>
+            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#isTheInsideOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Some Object or Region is contained in some other Object or Region.
+It is the result of a property chain like:
+if A is a ProperPart of B, and B is the inside of C, then A is contained in C.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#isTheInsideOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#isTheInsideOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#Inside"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>The relation between an Inside and some Object or Region. The existance of this property is important to make assertions about the containment potentiality of some Object or Region even if no other Object or Region is contained inside.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#locatedIn -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#locatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#Inside -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl#Inside">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Object"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>An abstraction indicating the inside of some Object or Region.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

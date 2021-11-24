@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_FROM.owl" uri="ISL_ON_PATH_FROM.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_GOING_OUT.owl" uri="ISL_GOING_OUT.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_TOWARD" uri="ISL_ON_PATH_TOWARD.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_GOING_IN" uri="ISL_GOING_IN.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_CROSSING_OPENING" uri="ISL_CROSSING_OPENING.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/CONTAINMENT" uri="ISL_CONTAINMENT.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_FROM" uri="ISL_ON_PATH_FROM.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_OUTSIDE_OF" uri="ISL_OUTSIDE_OF.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_BLOCKAGE.owl" uri="BLOCKAGE.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_CONTAINMENT.owl" uri="ISL_CONTAINMENT.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_General_Vocabulary.owl" uri="ISL_General_Vocabulary.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.ontologydesignpatterns.org/ont/ISL/2021/0/ISL_containment_closure.owl" uri="ISL_Containment_closure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_CROSSING_OPENING.owl" uri="ISL_CROSSING_OPENING.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_GOING_IN.owl" uri="ISL_GOING_IN.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_GOING_OUT" uri="ISL_GOING_OUT.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_TOWARD.owl" uri="ISL_ON_PATH_TOWARD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/untitled-ontology-347" uri="ISL_OUTSIDE_OF.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1637743450715" name="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/untitled-ontology-352" uri="ISL_ON_PATH_FROM.owl"/>
+    </group>
+</catalog>
