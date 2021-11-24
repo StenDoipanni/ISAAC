@@ -16,6 +16,15 @@
         <owl:imports rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_FROM.owl"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_ON_PATH_TOWARD.owl"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/sten-doipanni/ontologies/2021/5/ISL_OUTSIDE_OF.owl"/>
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Designed by Stefano De Giorgis and Aldo Gangemi.</rdfs:comment>
+        <rdfs:comment>This is the transitive closure of the import relation for the Image Schema Logic (ISL) network translated from DOL to OWL2.
+ISL reuses RCC8, QCT, and other theories, which are yet to be imported as 
+
+The full expressivity of DOL cannot be attained in OWL2: a &apos;best approximation&apos; is provided in OWL2, typically equivalence axioms for binary relations with intersection or union set builders are reduced to subproperty axioms.
+
+OWL2 sources (or appropriately designed in OWL2 in case they are not available). The reused vocabulary is contained and minimally axiomatised in the GeneralVocabulary module.</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1
+some documentation is still missing</owl:versionInfo>
     </owl:Ontology>
     
 
