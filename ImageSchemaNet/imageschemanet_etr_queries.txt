@@ -38,15 +38,20 @@ WHERE {
 { ?x1 isnet:lexicalSenseActivation ?isLex .
 FILTER(regex(?x1, "insert_variable", "i")) }
 UNION
-{ ?x2 isnet:coreSPActivation ?coresp .FILTER(regex(?x2, "insert_variable", "i")) }
+{ ?x2 isnet:coreSPActivation ?coresp .
+FILTER(regex(?x2, "insert_variable", "i")) }
 UNION
-{ ?x3 isnet:peripheralSPActivation ?perisp .FILTER(regex(?x3, "insert_variable", "i")) }
+{ ?x3 isnet:peripheralSPActivation ?perisp .
+FILTER(regex(?x3, "insert_variable", "i")) }
 UNION
-{ ?x4 isnet:extraThematicSPActivation ?etsp .FILTER(regex(?x4, "insert_variable", "i")) }
+{ ?x4 isnet:extraThematicSPActivation ?etsp .
+FILTER(regex(?x4, "insert_variable", "i")) }
 UNION
-{ ?x5 isnet:semTypeActivation ?semis .FILTER(regex(?x5, "insert_variable", "i")) }
+{ ?x5 isnet:semTypeActivation ?semis .
+FILTER(regex(?x5, "insert_variable", "i")) }
 UNION
-{ ?x6 isnet:semanticRoleActivation ?rolesp .FILTER(regex(?x6, "insert_variable", "i")) }
+{ ?x6 isnet:semanticRoleActivation ?rolesp .
+FILTER(regex(?x6, "insert_variable", "i")) }
 }
 
 
