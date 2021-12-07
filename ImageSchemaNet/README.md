@@ -24,7 +24,7 @@ Enjoy! <br/>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Query to ask if some entity is a lexical activator of some spatial primitive which is necessary to the image schemaCONTAINMENT.
+Query to ask if some entity is a lexical activator of some spatial primitive which is necessary to the image schema CONTAINMENT.
 
 
 ```
@@ -39,15 +39,37 @@ ASK {
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Query to retrieve all the entities, image schemas and spatial primitives for which some entity is a lexical activator of some SP which is a necessary SP to some IS.
+Query to retrieve all entities which have some relation with an Image Schema filtered by a desired variable.
+
 
 ```
 PREFIX isnet: <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#>
 PREFIX isaac: <http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#>
 
-SELECT DISTINCT ?entity ?sp
+SELECT ?entity
+
+WHERE
+{ ?entity ?p ?o . 
+?o a isaac:ImageSchema .
+FILTER(regex(?entity, "insert_variable", "i"))
+}
+LIMIT 1000
+
+```
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Query to retrieve all entities, spatial primitives and image schemas for which some entity is a lexical activator of some SP which is a necessary SP to some IS.
+
+```
+PREFIX isnet: <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#>
+PREFIX isaac: <http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#>
+
+SELECT DISTINCT ?entity ?sp ?is
 WHERE {
 ?entity isnet:lexicalSenseActivation ?sp .
+?is isaac:necessarySP ?sp .
 FILTER(regex(?entity, "insert_variable", "i"))
 }
 
