@@ -31,7 +31,8 @@ Query to ask if some entity is a lexical activator of some spatial primitive whi
 PREFIX isnet: <http://www.ontologydesignpatterns.org/ont/is/isnet.owl#>
 PREFIX isaac: <http://www.ontologydesignpatterns.org/ont/is/isaac_vanilla.owl#>
 ASK {
-?entity isnet:lexicalSenseActivation isaac:CONTAINMENT .
+?entity isnet:lexicalSenseActivation ?sp .
+?sp ^isaac:necessarySP isaac:CONTAINMENT .
 }
 
 ```
