@@ -11,7 +11,7 @@ ImageSchemaNet is a new resource that formalizes the cognitive theory of image s
 Image schemas are described as dynamic conceptual building blocks originating from our sensorimotor interactions with the physical world, and enable our sense-making cognitive activity to assign coherence and structure to entities, events and situations we experience everyday.
 
 
-ImageSchemaNet is an ontology that aligns pre-existing resources, such as FrameNet, VerbNet, WordNet and MetaNet from the Framester hub, to image schema theory, aiming at an empirical application of image schemas combined with sematic parsers on the task of annotating natural language sentences with image schemas.
+ImageSchemaNet is an ontology that aligns pre-existing resources, such as FrameNet, VerbNet, WordNet and MetaNet from the Framester hub, to image schema theory, aiming at an empirical application of image schemas combined with semantic parsers on the task of annotating natural language sentences with image schemas.
 
 
 
