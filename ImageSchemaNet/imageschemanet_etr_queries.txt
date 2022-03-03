@@ -1,4 +1,7 @@
 
+These are sample queries to explore ImageSchemaNet resource.
+
+
 
 -------------- ASK -----------------
 
