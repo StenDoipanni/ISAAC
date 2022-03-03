@@ -1,0 +1,98 @@
+tweet_text,label,pred,trig
+That’s just a peripheral issue.,center_periphery,periphery,https://w3id.org/framester/wn/wn30/instances/synset-peripheral-adjective-1
+This is the core of the matter.,center_periphery,"center, part_whole","https://w3id.org/framester/wn/wn30/instances/supersense-noun_group, https://w3id.org/framester/wn/wn30/instances/synset-core-noun-1"
+Put aside for a moment the fact that the man has been in prison.,center_periphery,"blockage, goal","https://w3id.org/framester/framenet/abox/fe/Goal.placing, https://w3id.org/framester/data/framestercore/Prison"
+In the midst of the nation’s grief.,center_periphery,"containment, part_whole, center_periphery, container","https://w3id.org/framester/wn/wn30/instances/synset-midst-noun-1, https://w3id.org/framester/wn/wn30/instances/supersense-noun_group, https://w3id.org/framester/data/framestercore/PartInnerOuter, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location"
+The chairman has managed to weave together quite a coalition,center_periphery,"part_whole, path","https://w3id.org/framester/data/framestercore/Alliance, https://w3id.org/framester/wn/wn30/instances/synset-alliance-noun-3, https://w3id.org/framester/wn/wn30/instances/supersense-noun_group, https://w3id.org/framester/framenet/abox/fe/Road.path_shape"
+I can’t tell them apart.,center_periphery,,
+These ideas are closely related.,center_periphery,,
+France has close ties to former colony Tunisia,center_periphery,part_whole,"https://w3id.org/framester/wn/wn30/instances/supersense-noun_group, https://w3id.org/framester/wn/wn30/instances/synset-colony-noun-1"
+Far be it for me to try and teach you your job,center_periphery,,
+That's a far-fetched idea.,center_periphery,containment,https://w3id.org/framester/wn/wn30/instances/synset-idea-noun-1
+I feel close to him.,center_periphery,,
+He distances himself.,center_periphery,,
+People who are dear to us should be near us.,center_periphery,part_whole,https://w3id.org/framester/wn/wn30/instances/supersense-noun_group
+Who's with me?,center_periphery,,
+We are approaching the end of the year.,center_periphery,"source_path_goal, container, goal","https://w3id.org/framester/framenet/abox/fe/Goal.arriving, https://w3id.org/framester/data/framestercore/ProcessEnd, https://w3id.org/framester/wn/wn30/instances/synset-end-noun-1, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location"
+It is close on midnight.,center_periphery,,
+He was close to tears.,center_periphery,,
+My symptoms went away.,center_periphery,,
+Canada is by far the closest of all our neighbors.,center_periphery,center_periphery,"https://w3id.org/framester/wn/wn30/instances/synset-far-adjective-1, https://w3id.org/framester/data/framestercore/Range"
+What obligations have you gotten yourself into?,containment,,
+Try to get out of those committments,containment,,
+Have they entered into an agreement yet?,containment,,
+My morning has been very full.,containment,,
+Who put that idea in your head?,containment,"containment, part_whole, goal","https://w3id.org/framester/wn/wn30/instances/synset-idea-noun-1, https://w3id.org/framester/framenet/abox/fe/Goal.placing, https://w3id.org/framester/wn/wn30/instances/synset-head-noun-1"
+Keep it in the back of your mind,containment,part_whole,https://w3id.org/framester/wn/wn30/instances/synset-back-noun-1
+Open your mind to some new thoughts.,containment,,
+I’ve kept this in my memory for years.,containment,containment,https://w3id.org/framester/wn/wn30/instances/synset-memory-noun-1
+There was passion in her eyes.,containment,"periphery, container","https://w3id.org/framester/wn/wn30/instances/synset-there-noun-1, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location"
+The ship is coming into view.,containment,center_periphery,"https://w3id.org/framester/data/framestercore/Range, https://w3id.org/framester/wn/wn30/instances/synset-position-noun-3"
+He’s out of sight now.,containment,containment,https://w3id.org/framester/wn/wn30/instances/synset-sight-noun-1
+He’s a young man trapped in an old man’s body.,containment,part_whole,https://w3id.org/framester/wn/wn30/instances/synset-body-noun-1
+He’s a beautiful person inside.,containment,"containment, part_whole, center_periphery, container","https://w3id.org/framester/data/framestercore/PartInnerOuter, https://w3id.org/framester/wn/wn30/instances/synset-inside-noun-2, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location"
+She was filled with hatred.,containment,,
+The truth had to be dragged out of him.,containment,source,https://w3id.org/framester/framenet/abox/fe/Source.cause_motion
+We’re in a mess.,containment,,
+We’re in a lot of trouble now.,containment,"part_whole, blockage","https://w3id.org/framester/wn/wn30/instances/synset-batch-noun-2, https://w3id.org/framester/data/framestercore/Predicament"
+The solution finally was brought to light.,containment,,
+We fished out a number of unpleasant facts.,containment,,
+I put a lot of energy into washing the windows.,containment,"part, part_whole, goal","https://w3id.org/framester/wn/wn30/instances/synset-batch-noun-2, https://w3id.org/framester/framenet/abox/fe/Body_part.grooming, https://w3id.org/framester/framenet/abox/fe/Goal.placing"
+He’s in love.,containment,,
+I’m slowly getting into shape.,containment,,
+The limit must be drawn somewhere.,containment,"containment, blockage",https://w3id.org/framester/wn/wn30/instances/synset-limit-noun-1
+This goes beyond all bounds.,containment,goal,https://w3id.org/framester/framenet/abox/fe/Goal.motion
+The whole situation spiraled out of control.,containment,whole,https://w3id.org/framester/wn/wn30/instances/synset-whole-adjective-1
+There are twenty members in this group.,containment,"periphery, part_whole, container","https://w3id.org/framester/wn/wn30/instances/synset-there-noun-1, https://w3id.org/framester/wn/wn30/instances/synset-group-noun-1, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location"
+He kept a lid on anger,containment,part_whole,https://w3id.org/framester/wn/wn30/instances/synset-eyelid-noun-1
+He's bursting with excitement.,containment,,
+There is both cotton and polyester in that shirt.,containment,"periphery, container","https://w3id.org/framester/wn/wn30/instances/synset-there-noun-1, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location"
+let the cat out of the bag,containment,containment,"https://w3id.org/framester/wn/wn30/instances/synset-bag-noun-1, https://w3id.org/framester/wn/wn30/instances/synset-out-noun-1, https://w3id.org/framester/data/framestercore/Containers"
+The wind bellied out the sails.,containment,,
+You’re getting off the subject.,containment,,
+They had a falling out.,containment,,
+They pieced a theory together.,part_whole,,
+I’m going to pieces.,part_whole,goal,https://w3id.org/framester/framenet/abox/fe/Goal.motion
+He took the problem apart piece by piece.,part_whole,"part_whole, source, blockage","https://w3id.org/framester/wn/wn30/instances/synset-problem-noun-1, https://w3id.org/framester/wn/wn30/instances/synset-piece-noun-1, https://w3id.org/framester/data/framestercore/Predicament, https://w3id.org/framester/framenet/abox/fe/Source.removing"
+He tore the problem apart looking for its solution.,part_whole,blockage,"https://w3id.org/framester/wn/wn30/instances/synset-problem-noun-1, https://w3id.org/framester/data/framestercore/Predicament"
+Something is missing in that argument.,part_whole,,
+His thoughts are scattered.,part_whole,,
+I’m missing a piece of the puzzle.,part_whole,part_whole,"https://w3id.org/framester/wn/wn30/instances/synset-puzzle-noun-2, https://w3id.org/framester/wn/wn30/instances/synset-piece-noun-1"
+We are one.,part_whole,,
+She is my other half.,part_whole,containment,https://w3id.org/framester/wn/wn30/instances/synset-one-half-noun-1
+Five is made up of two plus three.,part_whole,,
+The Milky Way belongs to a cluster of galaxies.,part_whole,part_whole,"https://w3id.org/framester/wn/wn30/instances/supersense-noun_group, https://w3id.org/framester/wn/wn30/instances/synset-bunch-noun-1"
+Our galaxy has at least 100 billion planets.,part_whole,part_whole,https://w3id.org/framester/wn/wn30/instances/supersense-noun_group
+The eye possesses several parts.,part_whole,part_whole,https://w3id.org/framester/wn/wn30/instances/synset-eye-noun-1
+Let’s meet the future head-on.,source_path_goal,source_path_goal,https://w3id.org/framester/data/framestercore/TemporalCollocation
+The deadline is approaching.,source_path_goal,,
+There’s going to be trouble along the road.,source_path_goal,"periphery, blockage, container, source_path_goal, path","https://w3id.org/framester/data/framestercore/Roadways, https://w3id.org/framester/data/framestercore/Predicament, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location, https://w3id.org/framester/wn/wn30/instances/synset-road-noun-1, https://w3id.org/framester/wn/wn30/instances/synset-there-noun-1"
+Things are going my way.,source_path_goal,,
+Let's keep moving forward.,source_path_goal,blockage,https://w3id.org/framester/data/framestercore/InhibitMovement
+You are falling behind on your studies.,source_path_goal,,
+He went over the edge.,source_path_goal,"goal, center_periphery, container, support","https://w3id.org/framester/data/framestercore/LocativeRelation, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location, https://w3id.org/framester/framenet/abox/fe/Goal.motion, https://w3id.org/framester/data/framestercore/Supply, https://w3id.org/framester/wn/wn30/instances/synset-edge-noun-1"
+He finally reached his goals.,source_path_goal,,
+It took him hours to reach a state of perfect concentration.,source_path_goal,"part_whole, source, container","https://w3id.org/framester/wn/wn30/instances/synset-concentration-noun-1, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location, https://w3id.org/framester/framenet/abox/fe/Source.removing"
+As we travel down life’s path. . .,source_path_goal,"source_path_goal, path","https://w3id.org/framester/wn/wn30/instances/synset-way-noun-5, https://w3id.org/framester/data/framestercore/Conduct, https://w3id.org/framester/wn/wn30/instances/synset-travel-verb-1, https://w3id.org/framester/data/framestercore/Motion, https://w3id.org/framester/data/framestercore/Travel"
+His life has taken a good course.,source_path_goal,path,https://w3id.org/framester/wn/wn30/instances/synset-course-noun-1
+I go where my path leads me.,source_path_goal,"source_path_goal, path, goal","https://w3id.org/framester/data/framestercore/Conduct, https://w3id.org/framester/framenet/abox/fe/Goal.motion, https://w3id.org/framester/wn/wn30/instances/synset-way-noun-5"
+As I've traveled through life,source_path_goal,,
+He has changed his direction in life,source_path_goal,"source_path_goal, container, path","https://w3id.org/framester/data/framestercore/Roadways, https://w3id.org/framester/wn/wn30/instances/synset-direction-noun-1, https://w3id.org/framester/wn/wn30/instances/supersense-noun_location"
+He started going down a bad life path.,source_path_goal,"source_path_goal, path","https://w3id.org/framester/data/framestercore/Conduct, https://w3id.org/framester/wn/wn30/instances/synset-way-noun-5"
+He's no longer with us.,source_path_goal,,
+They stopped me from leaving.,source_path_goal,,
+Our conservation program needs your support.,support,"source_path_goal, support, goal","https://w3id.org/framester/data/framestercore/Purpose, https://w3id.org/framester/wn/wn30/instances/synset-support-noun-1, https://w3id.org/framester/wn/wn30/instances/synset-plan-noun-1"
+I've really been leaning on my friends the past few months.,support,,
+The poor in our country need a boost up.,support,"part_whole, support","https://w3id.org/framester/data/framestercore/Assistance, https://w3id.org/framester/wn/wn30/instances/supersense-noun_group, https://w3id.org/framester/data/framestercore/Needing, https://w3id.org/framester/wn/wn30/instances/synset-boost-noun-1"
+In times of need,support,support,"https://w3id.org/framester/data/framestercore/Needing, https://w3id.org/framester/wn/wn30/instances/synset-need-noun-1"
+Our conservation program needs your support.,support,"source_path_goal, support, goal","https://w3id.org/framester/data/framestercore/Purpose, https://w3id.org/framester/wn/wn30/instances/synset-support-noun-1, https://w3id.org/framester/wn/wn30/instances/synset-plan-noun-1"
+Let’s try to get around this problem.,blockage,blockage,"https://w3id.org/framester/wn/wn30/instances/synset-problem-noun-1, https://w3id.org/framester/data/framestercore/Predicament"
+We ran into a brick wall.,blockage,"part_whole, goal","https://w3id.org/framester/wn/wn30/instances/synset-wall-noun-1, https://w3id.org/framester/framenet/abox/fe/Goal.self_motion"
+We hit a roadblock.,blockage,blockage,https://w3id.org/framester/wn/wn30/instances/synset-barrier-noun-2
+Our project has hit a roadblock.,blockage,blockage,https://w3id.org/framester/wn/wn30/instances/synset-barrier-noun-2
+We have a lot of hurdles to get over in our relationship.,blockage,part_whole,https://w3id.org/framester/wn/wn30/instances/synset-batch-noun-2
+Recently enacted policies provide cover for companies engaged in illicit activities.,blockage,support,"https://w3id.org/framester/wn/wn30/instances/synset-supply-verb-1, https://w3id.org/framester/data/framestercore/Supply"
+My life is going nowhere - I'm just spinning my wheels.,blockage,goal,https://w3id.org/framester/framenet/abox/fe/Goal.motion
+Break out of your daily routine.,blockage,containment,https://w3id.org/framester/wn/wn30/instances/synset-out-noun-1
+Workers of the world throw off your chains!,blockage,,
+All these rules and regulations are obstacles to innovation.,blockage,,
