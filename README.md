@@ -5,59 +5,55 @@ This repository contains the source code of ISAAC Ontology Network.
 ### What is ISAAC?
 
 ISAAC is a modular ontology for Image Schema Abstraction And Cognition, building a new top image schematic roles level on frames represented and formalized in [Framester](https://github.com/framester/Framester).
-Its design applies the [COntPare]() methodology for epistemic ontology comparison at the domain of image schema theories.
-Furthermore, ISAAC is supplied with a practical application, which extends the Framester schema, operationalising image schemas in knowledge graphs extracted from text.
+ISAAC is supplied with a practical application, ImageSchemaNet which extends the Framester schema, operationalising image schemas in knowledge graphs extracted from text.
 
 
-
-
-Comparing different, at times conflicting, theoretical accounts on one and the same phenomenon represents a highly challenging task. At the same time, it is an essential task to obtain a comprehensive overview of theoretical contributions on a specialized topic, and position one's own work. Ontologies are a means to explicitly represent theories: we propose an ontology-based comparison  approach to reconcile different image-schematic theories. At the same time, we aims at producing a semantic operationalization of image schemas through a sensorimotor grounding of knowledge graphs extracted from text.
 
 
 ### LIst of ontology modules
 
 
-[Johnson1987](http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl) ``http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl``
+[J87](http://www.ontologydesignpatterns.org/ont/is/j87.owl) ``http://www.ontologydesignpatterns.org/ont/is/j87.owl``
 
-[Mandler & Pagán Cánovas](http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl) ``http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl``
+[MPC](http://www.ontologydesignpatterns.org/ont/is/mpc.owl) ``http://www.ontologydesignpatterns.org/ont/is/mpc.owl``
 
-[Hedblom module](http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl) ``http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl``
+[HED](http://www.ontologydesignpatterns.org/ont/is/hed.owl) ``http://www.ontologydesignpatterns.org/ont/is/hed.owl``
 
 [ISCAT](http://www.ontologydesignpatterns.org/ont/is/iscat.owl) ``http://www.ontologydesignpatterns.org/ont/is/iscat.owl``
 
 [ISFrame](http://www.ontologydesignpatterns.org/ont/is/isframe.owl) ``http://www.ontologydesignpatterns.org/ont/is/isframe.owl``
 
-[Exuviae](http://www.ontologydesignpatterns.org/ont/is/exuviae.owl) ``http://www.ontologydesignpatterns.org/ont/is/exuviae.owl``
-
-[ISExuviae](http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl) ``http://www.ontologydesignpatterns.org/ont/is/isexuviae.owl``
-
 [ISAAC](http://www.ontologydesignpatterns.org/ont/is/isaac.owl) ``http://www.ontologydesignpatterns.org/ont/is/isaac.owl``
 
-[ISclosure](http://www.ontologydesignpatterns.org/ont/is/isclosure.owl) ``http://www.ontologydesignpatterns.org/ont/is/isclosure.owl``
 
 
 
 ### ISAAC ontology network in detail
 
+ISAAC modular ontology includes three main theoretical modules:
 
-**Johnson1987**
+**J87**
 
 The ontological transposition of the first five chapters of Mark Johnson's "The Body in the Mind".
 This theory was chosen because it is the beginning of the last 40 years of studies about embodied cognition, moving first steps in 1987 and still very alive and in need of further work.
 
 
 
-**Mandler and Pagán Cánovas**
+**MPC**
 
 The ontological version of [1](https://d1wqtxts1xzle7.cloudfront.net/39255761/54d803e90cf2970e4e764653.pdf?1445107592=&response-content-disposition=inline%3B+filename%3DOn_defining_image_schemas.pdf&Expires=1620342019&Signature=LcS38kkqdWTN3F6HumKPZ~xa4rIc8Q5MV2hevqclSLpmWsryhKI3496FcZwYljKbGeSNlvmfv-OBIOzCY37FGH4oedAVdHTNDzvNoVfdIQ7Zzru3daKdTWrypGIsKuGOHgwF46J7-Mr9SDoHtG7H9MeNA1TqHFNwhdt1xVQ62OuAuJk27kXSr1y~RHqVqTC7l~GbFVwQ9us8zzcWfUiLkFTX89rz3b0sGYdVpyze6PVEaYdYFY8DhQUgBFi5ppPbT9VkbwF5Akn7Y7WQ2Y18Vyms6n3LPSqNdnL-mEcOquBDxueaslGOZ~xruftZzTgYYxQPVxFHARRdDPbe7A0NDg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA). This module was chosen for the importance of introducing spatial primitives, namely the first spatial building blocks, and introducing some light formalization in the compositionality of image schemas.
 
 
 
-**Hedblom**
+**HED**
 
 The ontological version of the image schema theory elaborated by Hedblom et al. in [1](https://link.springer.com/article/10.1007/s13218-019-00605-1), [2](https://dl.acm.org/doi/abs/10.1145/3167132.3167233?casa_token=jA3_AHLyUroAAAAA:r1dve2UFBe2nfhN0nHn8irpKYRhH-MQdqbCpzvZvAJyNO8UzPJ6K3ZdBwOrN3T7ZTlOX4yPZQxU), [3](https://www.inf.unibz.it/~okutz/resources/Choosing-the-Right-Path_-Image-Schema-Theory-as-a-Foundation-for-Concept-Invention-(JAGI).pdf) and [4](http://aiia2017.di.uniba.it/wp-content/uploads/Hedblom.pdf).
 This module was chosen for its importance in formalizing image schemas structure, image schemas combinations and image schemas complexity depending on the reuse of spatial primitives.
 
+
+
+ISAAC imports the above mentioned modules and introduces some axioms and properties to perform cross-modular inferences.
+Finally, some additional modules are being developed and integrated in the network.
 
 
 **ISCAT**
@@ -70,36 +66,5 @@ The module obtained from the reorganization of [this resource](http://zope.psyer
 The mappings from ISCAT repository to FrameNet and MetaNet source and target domain frames, declaring also the spatial primitive / image schema gestaltically structuring the metaphor.
 
 
-**Exuviae**
 
-Exuviae (In biology, exuviae are the remains of an exoskeleton and related structures that are left after ecdyso-zoans - including insects, crustaceans and arachnids - have moulted.” [wiki here](https://en.wikipedia.org/wiki/Exuviae) ) is the module used to explain the epistemic choices done while comparing elements of the same or different theories.
-
-Some of the main classes:
-
-- _ex:TheoreticalFragment_: a TheoreticalFragment is a collection of related ontology elements from one or multiple theories. The fragment is the hub useful to compare different theories and derive some element by applying epistemological choices made based on some criterion, leading to a selection result;
-- _ex:EpistemicComparison_: the hub for epistmic operations on theory fragments with the purpose to compare and select one;
-- _ex:CriterionMeasurement_: the Measurement of the Criterion chosen to select a Fragment against another. e.g. better literature grounding, more soundness, better resources at disposal, more operationalizable structure etc.;
-- _ex:SelectionCriterion_: the Criterion based on which some Selection is made;
-- _RefraimingModus_: the way in which some entity is conceptually derived from a theory but with some modifications;
-- _ex:SelectionResult_: the result of the Selection based on some SelectionCriterion.
-
-
-![Exuviae graph](exuviae.svg)
-
-
-
-**ISExuviae**
-
-The Exuviae epistemical exoskeleton applied to image schemas theories, in their ontological version, aligned foundationally to DOLCE+DnS and Framester.
-This module is the one in which different elements of ontologies are clustered in the same TheoreticalFragment. The Theoreticalfragment hub is used to apply some SelectionCriterion and CriterionMeasurement in order to compare ontology elements among them.
-e.g. in the "ImageSchemaFragment" we find the collection of "ImageSchema" concepts as presented in the Johnoons87, Hedblom and Mandler&Pagán Cánovas theories.
-
-
-**ISAAC**
-
-The integrated theory, result of the epistemic choices explained in ISExuviae, taking elements from previous theories, grounding them formally and aligning them to DOLCE foundational ontology, introducing the Image Schema Activation with more than five thousends Framester roles (from WordNet, VerbNet, Propbank and FrameNet) activating the corresponding spatial primitive / image schema.
-
-**ISclosure**
-
-The closure module importing all the previous module of the ISAAC ontology network.
 
