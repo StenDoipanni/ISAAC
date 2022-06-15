@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#"
+     xml:base="http://www.ontologydesignpatterns.org/ont/is/isaac.owl"
+     xmlns:hed="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#"
+     xmlns:mpc="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:john="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:isaac="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.ontologydesignpatterns.org/ont/is/isaac.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/is/johnson87is.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl"/>
+        <rdfs:comment>ISAAC is a modular ontology for Image Schema Abstraction And Cognition, building an integrated module importing the ontological transposition of previous existing theoretical material about image schemas.
+It provides the formal theoretical grounding to a new top image schematic roles level on frames represented and formalized in Framester (https://github.com/framester/Framester).
+
+ISAAC is supplied with a practical application, ImageSchemaNet which extends the Framester schema, operationalising image schemas in knowledge graphs extracted from text.
+
+The current version includes three main modules: J87, MPC and HED, as eplained below.
+
+J87: The ontological transposition of the first five chapters of Mark Johnson&apos;s &quot;The Body in the Mind&quot;.
+This theory was chosen because it is the beginning of the last 40 years of studies about embodied cognition, moving first steps in 1987 and still very alive and in need of further work.
+
+MPC: The ontological version of [1].
+This module was chosen for the importance of introducing spatial primitives, namely the first spatial building blocks, and introducing some light formalization in the compositionality of image schemas.
+
+HED: The ontological version of the image schema theory elaborated by Hedblom et al. in [2], [3], [4] and [5].
+This module was chosen for its importance in formalizing image schemas structure, image schemas combinations and image schemas complexity depending on the reuse of spatial primitives.
+
+
+
+
+Designed by Stefano De Giorgis and Aldo Gangemi.
+
+
+
+[1]: Mandler, Jean M., and Cristóbal Pagán Cánovas. &quot;On defining image schemas.&quot; Language and cognition 6.4 (2014): 510-532.
+[2]: Hedblom, Maria M., et al. &quot;Image schema combinations and complex events.&quot; KI-Künstliche Intelligenz 33.3 (2019): 279-291.
+[3]: Hedblom, Maria M., Dagmar Gromann, and Oliver Kutz. &quot;In, out and through: formalising some dynamic aspects of the image schema containment.&quot; Proceedings of the 33rd Annual ACM Symposium on Applied Computing. 2018.
+[4]: Hedblom, Maria Magdalena, Oliver Kutz, and Fabian Neuhaus. &quot;Choosing the right path: Image schema theory as a foundation for concept invention.&quot; Journal of Artificial General Intelligence 6.1 (2015): 21-54.
+[5]: Hedblom, Maria M., et al. &quot;Between c ontact and s upport: Introducing a logic for image schemas and directed movement.&quot; Conference of the Italian Association for Artificial Intelligence. Springer, Cham, 2017.</rdfs:comment>
+        <owl:versionInfo>version 1.1 - 13.06.2022
+Introduced axioms for Schematic Integration Inference.</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinationType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinationType"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#structuredAccordingTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#structuredAccordingTo"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isaac.owl#includesInProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#includesInProfile">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isaac.owl#inheritsTopologyFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#inheritsTopologyFrom">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#Concept -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#Concept">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#IS_Profile"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#EMOTION -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#EMOTION"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#FORCE -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#FORCE"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#SchematicIntegration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#BLOCKAGE -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#BLOCKAGE"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isaac.owl#Anger -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#Anger">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#EMOTION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/isaac.owl#btj_profile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#btj_profile">
+        <hed:profileParticipant rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#BLOCKAGE"/>
+        <includesInProfile rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#Anger"/>
+        <rdfs:comment>The IS profile of a complex event like &quot;being blocked in a traffic jam&quot; (created to test the ISAAC ontology).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#EMOTION -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#EMOTION"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#FORCE -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#FORCE"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sdg/ontologies/2022/5/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sdg/ontologies/2022/5/y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sdg/ontologies/2022/5/k">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sdg/ontologies/2022/5/z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule to declare that some IS Profile, if includes some element which is a Schematic Integration, inherits (part of its) topology from it.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S11</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#includesInProfile"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#EMOTION"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#inheritsTopologyFrom"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#x"/>
+                        <swrl:argument2 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#EMOTION"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule to infer the IS_profile organization according to some IS combination</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S10</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#profileParticipant"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#combinationType"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/y"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/k"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#structuredAccordingTo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/k"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule to infer profile participants for some IS_profile which takes as profile participant some IS which has as combination element some other IS</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S9</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#profileParticipant"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#hasCombinationElement"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/y"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/hedblomis.owl#profileParticipant"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule to declare that some IS Profile, if includes some element which is a Schematic Integration, inherits (part of its) topology from it.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S12</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#FORCE"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#includesInProfile"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/ont/is/isaac.owl#inheritsTopologyFrom"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sdg/ontologies/2022/5/isaac.owl#x"/>
+                        <swrl:argument2 rdf:resource="http://www.ontologydesignpatterns.org/ont/is/mandlerpaganis.owl#FORCE"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
