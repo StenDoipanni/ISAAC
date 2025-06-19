@@ -1,0 +1,218 @@
+sentence,original annotation,claude annotation,literal example,"metaphorical to literal
+appropriateness","original annotation
+appropriateness",notes
+right-wing party,VERTICALITY,"SCALE, PART-WHOLE, OBJECT",The right wing of the bird,7,1,original annotation?
+left-wing party,VERTICALITY,"SCALE, OBJECT, PART-WHOLE",The left wing of the bird,7,1,
+No known spoken language uses the lateral (left–right) axis for time.,VERTICALITY,"SCALE, SOURCE_PATH_GOAL, OBJECT",No known physical object uses the lateral (left–right) axis for measurement.,3,1,
+the right answer,VERTICALITY,"SCALE, OBJECT, VERTICALITY",the correct solution,3,1,
+my right-hand man,VERTICALITY,"PART-WHOLE, SUPPORT, LINK, OBJECT",The right hand is part of the body,3,1,
+out in left field,VERTICALITY,"CONTAINMENT, CENTER-PERIPHERY, SOURCE_PATH_GOAL",The player is standing in the left field of the baseball diamond.,4,1,
+two left feet,VERTICALITY,"PART-WHOLE, OBJECT",The person has two feet on the left side of their body.,3,1,
+His draft number is high.,VERTICALITY,"VERTICALITY, SCALE",The building's height is high.,4,7,
+"Speak up, please.",VERTICALITY,"VERTICALITY, SCALE, FORCE","Raise your voice volume, please.",4,7,
+"Keep your voice down, please.",VERTICALITY,"VERTICALITY, SCALE, FORCE","Lower the volume of the speaker, please.",4,7,
+Europeans are now complaining of high American interest rates.,VERTICALITY,"SCALE, VERTICALITY, FORCE",People are now speaking loudly about increased numerical values.,3,4,
+Home ownership involves higher indebtedness than renting a house does.,VERTICALITY,"SCALE, CONTAINMENT, OBJECT",The box contains more items than the bag does.,7,1,
+He has an edge over us.,VERTICALITY,"VERTICALITY, FORCE, SCALE",The knife has a sharp edge above the cutting board.,5,7,
+He has an edge over us.,VERTICALITY,"VERTICALITY, FORCE, SCALE",The knife has a sharp edge above the cutting board.,5,7,
+You can’t get a single joke out of him.,SUBSTANCE,"CONTAINMENT, SOURCE_PATH_GOAL, FORCE",You can't remove a single object from this container.,7,3,
+I couldn’t do much sprinting until the end.,SUBSTANCE,"SOURCE_PATH_GOAL, SCALE, FORCE",I couldn't run fast until I reached the finish line.,5,2,
+combined anger,SUBSTANCE,"SUBSTANCE, FORCE, CONTAINMENT",combined ingredients,5,7,
+Mrs Margaret Thatcher has struck three notes since the Communist world began to disintegrate.,SPLITTING,"FORCE, OBJECT, SPLITTING, SCALE",The musician has played three notes since the concert began to end.,2,7,
+"Sometimes truth may be suppressed for a long time but while it is imprisoned it gathers to itself more and more power so that on the day that it is finally released it explodes, blowing everything asunder.",SPLITTING,"CONTAINMENT, FORCE, SUBSTANCE, SCALE, SOURCE_PATH_GOAL, SPLITTING","Sometimes a pressurized gas may be contained for a long time but while it is compressed it accumulates more and more pressure so that on the day that it is finally released it expands rapidly, dispersing in all directions.",7,4,
+"The hallways are filled with the sounds of middle school students, primarily eighth graders, dissecting the second presidential debate from the evening before.",SPLITTING,"CONTAINMENT, SUBSTANCE, SPLITTING, OBJECT","The container is filled with water, primarily from the tap, flowing from the faucet opened the evening before.",3,7,
+Coming up in the weeks ahead …,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, VERTICALITY, CONTAINMENT",Walking up the stairs in the building ahead …,6,5,
+I’m looking ahead to Christmas.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, VERTICALITY",I'm looking forward on the road.,6,4,
+I can’t face the future.,SOURCE_PATH_GOAL,"CONTACT, OBJECT, SOURCE_PATH_GOAL",I can't look at the person in front of me.,7,4,
+I can’t face the future.,SOURCE_PATH_GOAL,"CONTACT, OBJECT, SOURCE_PATH_GOAL",I can't look at the person in front of me.,4,4,
+Let’s meet the future head-on.,SOURCE_PATH_GOAL,"CONTACT, SOURCE_PATH_GOAL, FORCE, OBJECT",Let's collide with the approaching car head-on.,4,7,
+"During the week preceding last Tuesday, things were impossibly hectic around here.",SOURCE_PATH_GOAL,"CONTAINMENT, SOURCE_PATH_GOAL, SCALE, CENTER-PERIPHERY","During the seven days before Tuesday, the office was very busy with many activities.",3,7,
+"In the following weeks, there will be no vacations.",SOURCE_PATH_GOAL,"CONTAINMENT, SOURCE_PATH_GOAL, SUBSTANCE","In the following rooms, there will be no furniture.",5,5,
+We’re coming up on Christmas.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, VERTICALITY, OBJECT",We're approaching the Christmas holiday on the calendar.,5,7,
+Will you be staying a long time or a short time?,SOURCE_PATH_GOAL,"SCALE, SOURCE_PATH_GOAL, CONTAINMENT",Will you be measuring a long distance or a short distance?,5,4,
+What will be the length of his visit?,SOURCE_PATH_GOAL,"SCALE, CONTAINMENT, SOURCE_PATH_GOAL",What will be the duration of his stay?,2,2,original annotation?
+Let’s spread the conference over two weeks.,SOURCE_PATH_GOAL,"SPLITTING, COVERING, SOURCE_PATH_GOAL, SCALE",Let's distribute the papers over two tables.,4,1,
+He’ll have his degree within two years.,SOURCE_PATH_GOAL,"CONTAINMENT, SOURCE_PATH_GOAL, OBJECT",The book is within the box for two hours.,4,4,
+He has a great future in front of him.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, OBJECT, CONTAINMENT, SCALE",He has a large building in front of him.,4,1,
+We’re all in the same boat.,SOURCE_PATH_GOAL,"CONTAINMENT, OBJECT, SUPPORT",We're all sitting in the same small vessel on the water.,4,4,
+Try to keep a tight rein on the situation.,SOURCE_PATH_GOAL,"FORCE, CONTAINMENT, CONTROL, LINK",Hold the horse's reins tightly while riding.,7,5,
+Hold your horses!,SOURCE_PATH_GOAL,"FORCE, CONTAINMENT, OBJECT",Hold the reins of your horse.,4,4,
+The GOP presidential race has a new front-runner: Gov. Rick Perry.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, CONTAINMENT, OBJECT",The marathon has a new leader: Runner John Smith.,5,6,
+Let’s put that in back of us.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, CONTAINMENT, OBJECT",Let's place that object behind our physical bodies.,3,1,
+He has a great future in front of him.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, OBJECT, CONTAINMENT, SCALE",He has a large building in front of him.,2,1,
+She's ahead of the game.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, SCALE, OBJECT",She's in front of the group.,3,1,
+Step forward and cast the first stone. Step back and let me handle this.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, FORCE, OBJECT, CONTACT",Move closer and throw the rock. Move away and allow me to manage the situation.,3,3,
+The test was at the forefront of my attention.,SOURCE_PATH_GOAL,"CENTER-PERIPHERY, CONTAINMENT, OBJECT",The book was at the front of the shelf.,6,1,
+That deadline is in the back of my mind.,SOURCE_PATH_GOAL,"CONTAINMENT, OBJECT, CENTER-PERIPHERY",That book is in the back of the shelf.,6,1,
+Should we place the needs of Europe's working classes before the needs of the masses of Africa and Asia?,SOURCE_PATH_GOAL,"SCALE, SOURCE_PATH_GOAL, CONTAINMENT, OBJECT",Should we put the food for our family on the table before the food for our neighbors?,7,4,
+He is in love.,SOURCE_PATH_GOAL,"CONTAINMENT, SUBSTANCE, FORCE",He is in the swimming pool.,7,1,original annotation?
+What kind of a state was he in when you saw him?,SOURCE_PATH_GOAL,"CONTAINMENT, OBJECT",What kind of a room was he in when you saw him?,4,4,
+She can stay/remain silent for days.,SOURCE_PATH_GOAL,"CONTAINMENT, SCALE, SUBSTANCE",The water can remain in the tank for days.,4,1,
+She can remain silent for days.,SOURCE_PATH_GOAL,"CONTAINMENT, SCALE, SUBSTANCE",The water can remain in the tank for days.,4,1,
+He is at rest.,SOURCE_PATH_GOAL,"CONTAINMENT, FORCE, SCALE",The book is on the shelf.,5,1,original annotation
+She is at play.,SOURCE_PATH_GOAL,"CONTAINMENT, SUBSTANCE, OBJECT",She is in the playground.,5,1,original annotation
+He remained standing.,SOURCE_PATH_GOAL,"VERTICALITY, SUPPORT",The tree remained upright.,7,1,original annotation
+He is at a certain stage in his studies.,SOURCE_PATH_GOAL,"CONTAINMENT, SOURCE_PATH_GOAL, SCALE",He is at a specific point on the timeline of his education.,4,4,
+What state is the project in?,SOURCE_PATH_GOAL,"CONTAINMENT, OBJECT",What room is the person in?,3,1,
+They are in love.,SOURCE_PATH_GOAL,"CONTAINMENT, SUBSTANCE, FORCE",They are in the swimming pool.,6,1,
+I’m in love.,SOURCE_PATH_GOAL,"CONTAINMENT, SUBSTANCE, FORCE",I'm in the swimming pool.,6,1,
+She’s out of her depression.,SOURCE_PATH_GOAL,"CONTAINMENT, SOURCE_PATH_GOAL, FORCE",She's out of the room.,4,1,
+He’s on the edge of madness.,SOURCE_PATH_GOAL,"CONTAINMENT, SCALE, SOURCE_PATH_GOAL, SUPPORT",He's standing on the edge of the cliff.,7,3,
+He’s in a deep depression.,SOURCE_PATH_GOAL,"CONTAINMENT, VERTICALITY, SCALE",He's in a deep hole.,7,4,
+She’s close to insanity.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, CONTAINMENT, SCALE",She's close to the edge of the cliff.,7,5,
+Harry’s in trouble.,SOURCE_PATH_GOAL,"CONTAINMENT, FORCE",Harry's in a box.,4,1,
+Shape up!,SOURCE_PATH_GOAL,"OBJECT, FORCE, VERTICALITY",Mold the clay into a specific form.,7,1,original annotation?
+He is a conformist.,SOURCE_PATH_GOAL,"CONTAINMENT, FORCE",He is inside the mold.,7,1,original annotation?
+She’s a reformed criminal.,SOURCE_PATH_GOAL,"CONTAINMENT, SOURCE_PATH_GOAL, FORCE",The clay is reshaped into a new form.,7,1,original annotation?
+He is working in many areas.,SOURCE_PATH_GOAL,"CONTAINMENT, SUBSTANCE, SPLITTING",He is standing in many rooms.,1,1,he is god
+He is in a difficult field.,SOURCE_PATH_GOAL,"CONTAINMENT, FORCE, SUBSTANCE",He is standing in a rocky terrain.,5,1,original annotation?
+There are many subareas in linguistics.,SOURCE_PATH_GOAL,"CONTAINMENT, PART-WHOLE",There are many rooms in a building.,7,4,
+He ranks above me.,SOURCE_PATH_GOAL,"VERTICALITY, SCALE",The book is placed above the notebook on the shelf.,3,1,
+They are lower class.,SOURCE_PATH_GOAL,"VERTICALITY, SCALE, CONTAINMENT",They are on the bottom shelf.,4,1,
+He’s the top of the heap.,SOURCE_PATH_GOAL,"VERTICALITY, SCALE, PART-WHOLE",The book is on top of the stack.,6,1,
+The baby is a new arrival.,SOURCE_PATH_GOAL,"SOURCE_PATH_GOAL, OBJECT",The package is a new delivery.,6,5,
+He's no longer with us.,SOURCE_PATH_GOAL,"CONTAINMENT, LINK, SOURCE_PATH_GOAL",He's no longer in this room.,4,4,
+He’s on the edge.,SOURCE_PATH_GOAL,"SUPPORT, SCALE, CONTAINMENT",The book is on the edge of the table.,4,1,
+I’m hanging on by my fingertips.,SOURCE_PATH_GOAL,"SUPPORT, CONTACT, FORCE, VERTICALITY",The climber is hanging on the cliff by their fingertips.,5,5,
+I’m on shaky ground.,SOURCE_PATH_GOAL,"SUPPORT, VERTICALITY, FORCE",The building stands on unstable soil.,7,1,
+He’ll never amount to anything.,SCALE,"SCALE, SOURCE_PATH_GOAL, SUBSTANCE",The water level will never reach the top of the container.,7,5,
+Texaco is a relatively small player in the California gasoline market but a bigger factor in the Eastern states that want to follow California's lead.,SCALE,"CONTAINMENT, SCALE, SOURCE_PATH_GOAL, OBJECT",Texaco has a small market share in California's gasoline sales but a larger market share in Eastern states that aim to adopt California's regulations.,4,7,very similar
+He’s a bigger eater than she is.,SCALE,"SCALE, SUBSTANCE, OBJECT",He consumes more food than she does.,3,7,
+A unified theory.,PART-WHOLE,"CONTAINMENT, LINK, OBJECT",A single box containing all items.,6,2,original annotation?
+His thoughts are scattered.,PART-WHOLE,"SPLITTING, CONTAINMENT, OBJECT",The papers are scattered on the floor.,7,5,part?
+The theory is a mess/ all over the place.,PART-WHOLE,"CONTAINMENT, SPLITTING, SUBSTANCE, SCALE",The papers are scattered all over the desk.,7,5,part?
+She is my better half.,PART-WHOLE,"PART-WHOLE, SCALE, LINK",She is half of the apple.,3,7,
+Mrs Margaret Thatcher has struck three notes since the Communist world began to disintegrate.,SPLITTING,"FORCE, OBJECT, SPLITTING, SCALE",The musician has played three notes since the concert began to end.,2,7,
+"Sometimes truth may be suppressed for a long time but while it is imprisoned it gathers to itself more and more power so that on the day that it is finally released it explodes, blowing everything asunder.",SPLITTING,"CONTAINMENT, FORCE, SUBSTANCE, SCALE, SOURCE_PATH_GOAL, SPLITTING","Sometimes a pressurized gas may be contained for a long time but while it is compressed it accumulates more and more pressure so that on the day that it is finally released it expands rapidly, dispersing in all directions.",7,4,
+"The hallways are filled with the sounds of middle school students, primarily eighth graders, dissecting the second presidential debate from the evening before.",SPLITTING,"CONTAINMENT, SUBSTANCE, SPLITTING, OBJECT","The container is filled with water, primarily from the tap, flowing from the faucet opened the evening before.",3,7,
+Don’t let the opportunity pass you by.,OBJECT,"SOURCE_PATH_GOAL, OBJECT, FORCE",Don't let the car pass you on the road.,5,7,
+I’ve had 3 opportunities to meet him.,OBJECT,"CONTAINMENT, SCALE, OBJECT",I've held 3 tickets to his event.,4,7,
+I've squandered every opportunity to advance my career.,OBJECT,"SOURCE_PATH_GOAL, OBJECT, FORCE",I've dropped every tool to build my house.,5,7,
+The dodo disappeared in the 1600s.,OBJECT,"CONTAINMENT, SOURCE_PATH_GOAL",The ship disappeared behind the horizon.,5,7,
+It`s difficult to put my ideas into words.,OBJECT,"CONTAINMENT, OBJECT, SUBSTANCE",It's difficult to put water into a bottle.,5,3,containment? substance?
+What’s the matter?,OBJECT,"SUBSTANCE, CONTAINMENT, OBJECT",What's inside this container?,6,3,
+"The distribution of sex cells, however, was a different matter.",OBJECT,"SUBSTANCE, SPLITTING, CONTAINMENT, OBJECT",The distribution of marbles in the jar was a different arrangement.,6,5,
+It is difficult for unilateralists to admit there is another side to the missile question.,OBJECT,"CONTAINMENT, OBJECT, PART-WHOLE, SPLITTING",It is difficult for people to see both sides of a physical object.,4,7,
+Let us turn to less weighty matters.,OBJECT,"SOURCE_PATH_GOAL, SCALE, SUBSTANCE, FORCE",Let us rotate towards lighter objects.,5,7,
+His words carry little meaning.,OBJECT,"FORCE, SUBSTANCE, SCALE",The truck carries a small load.,7,5,substance?
+The sentence is without meaning.,OBJECT,"CONTAINMENT, SUBSTANCE",The bottle is without water.,7,4,substance?
+Don't waste your time.,OBJECT,"SUBSTANCE, CONTAINMENT, SCALE",Don't spill your water.,7,4,substance?
+Our time is valuable.,OBJECT,"SUBSTANCE, OBJECT, SCALE",Our gold is valuable.,7,4,substance?
+We don't have much time.,OBJECT,"CONTAINMENT, SUBSTANCE, SCALE",The jar doesn't contain much water.,7,4,substance?
+"Again, if by any chance, we should ultimately win out in such a war, what would it cost us in treasure and in blood?",OBJECT,"SOURCE_PATH_GOAL, CONTAINMENT, SUBSTANCE, SCALE","If we succeed in this competition, what resources and lives would we lose?",5,1,
+Smog pollution is an environmental malaise.,OBJECT,"SUBSTANCE, CONTAINMENT, COVERING",Smog pollution is a widespread environmental problem.,3,1,
+Ecologists are nursing the Bay back to health.,OBJECT,"SOURCE_PATH_GOAL, FORCE, CONTAINMENT, SUBSTANCE",Doctors are treating the patient back to health.,7,3,original annotation...
+He got his red hair from his mother.,OBJECT,"SOURCE_PATH_GOAL, PART-WHOLE, LINK",He inherited his red hair from his mother.,3,7,
+She has a sunny disposition.,OBJECT,"CONTAINMENT, SUBSTANCE, OBJECT",The sky has a sunny appearance.,6,1,original annotation?
+This place has lost a lot of its charm.,OBJECT,"SUBSTANCE, CONTAINMENT, SCALE",This container has lost a lot of its contents.,7,1,
+"The dummies were 2-to-1 in favor of the Arizona immigration law; the court gutted it. Only those dummies, not in a state of denial, understand that we the people have lost control of our government.",OBJECT,"CONTAINMENT, FORCE, OBJECT, SCALE, SUBSTANCE",The majority of voters supported the Arizona immigration law; the court invalidated most of its provisions. Only those citizens who acknowledge the reality understand that the public has diminished influence over governmental decisions.,3,3,original annotation?
+"The Shadow Party: How George Soros, Hillary Clinton, and Sixties Radicals Seized Control of the Democratic Party",OBJECT,"CONTAINMENT, FORCE, OBJECT, COVERING",The new management team took over leadership of the company,7,2,object?
+She came to a calculated decision.,OBJECT,"SOURCE_PATH_GOAL, CONTAINMENT, OBJECT",She arrived at a specific location.,7,1,
+We're still trying to grind out the solution to this equation.,OBJECT,"FORCE, SOURCE_PATH_GOAL, SUBSTANCE, CONTAINMENT",We're still trying to solve this complex equation step by step.,5,3,
+I'm a little rusty today.,OBJECT,"SUBSTANCE, COVERING, SCALE",The metal surface is slightly rusty today.,7,4,Substance?
+spike of anger,OBJECT,"VERTICALITY, SCALE, SUBSTANCE, FORCE",spike of temperature,7,1,
+Are you going to the race?,OBJECT,"SOURCE_PATH_GOAL, CONTAINMENT",Are you walking to the stadium?,7,1,original annotation?
+Did you see the race?,OBJECT,"SOURCE_PATH_GOAL, OBJECT",Did you watch the runners move from start to finish?,4,5,
+He’s a fortune-hunter.,OBJECT,"SOURCE_PATH_GOAL, OBJECT",He's a treasure seeker in an ancient ruin.,6,4,substance?
+She’s a gold-digger.,OBJECT,"SUBSTANCE, OBJECT, SOURCE_PATH_GOAL",She's a miner extracting gold from the earth.,7,4,substance?
+Something doesn't smell quite right here.,OBJECT,"SUBSTANCE, CONTAINMENT, SCALE",The food doesn't smell fresh in this container.,7,4,substance?
+Listen to what your father tells you.,OBJECT,"FORCE, LINK, SOURCE_PATH_GOAL",Hear the words your father speaks to you.,1,1,
+I could never put my finger on what the problem was. I felt crazy at times and there were so many times that I would approach him with a very well-thought out ...,OBJECT,"CONTACT, OBJECT, SOURCE_PATH_GOAL",I could never precisely identify the issue. I felt confused at times and there were many occasions when I would talk to him with a carefully prepared ...,1,1,
+I'm now going to show you that you are wrong.,OBJECT,"SOURCE_PATH_GOAL, FORCE, OBJECT, CONTACT",I'm now going to point to the incorrect answer on the paper.,4,4,
+Do I have to draw a picture for you?,OBJECT,"CONTAINMENT, OBJECT, SOURCE_PATH_GOAL",Do I have to show you a physical diagram?,4,5,
+"I kept getting close to a world championship, but it kept escaping me.",OBJECT,"SOURCE_PATH_GOAL, FORCE, OBJECT, CONTAINMENT","I kept approaching the finish line, but the runner ahead kept increasing their lead.",4,7,
+He has interesting pursuits.,OBJECT,"OBJECT, SOURCE_PATH_GOAL, CONTAINMENT",He has interesting hobbies.,4,7,
+She landed four huge accounts this year.,OBJECT,"SOURCE_PATH_GOAL, CONTAINMENT, OBJECT, SCALE",She acquired four large clients this year.,2,6,
+A passerby ... quickly realized his distress.,OBJECT,"CONTACT, FORCE, CONTAINMENT",A person quickly saw the man's visible signs of distress.,5,6,
+having connections,LINK,"LINK, POSSESSION, OBJECT",having physical ropes,3,3,
+Focus force on the weak spots.,FORCE,"FORCE, SOURCE_PATH_GOAL, CONTACT, OBJECT",Direct the laser beam onto the thin areas of the metal.,6,5,the new one is more difficult
+It took a lot of force to open it.,FORCE,"FORCE, OBJECT, SOURCE_PATH_GOAL",The door required significant physical effort to push open.,7,5,the new one is more difficult
+His punches carry a lot of force.,FORCE,"FORCE, SUBSTANCE, OBJECT",The truck carries a heavy load.,3,1,
+Each sentence contained the force of an order.,FORCE,"CONTAINMENT, FORCE, SUBSTANCE",Each box contained a heavy object.,3,1,
+FDR's leadership brought the country out of the depression.,FORCE,"SOURCE_PATH_GOAL, CONTAINMENT, FORCE",The guide led the hikers out of the cave.,7,2,annotazione originale non tanto sensata?
+and she sat up to meet its thrusts,FORCE,"SOURCE_PATH_GOAL, FORCE, CONTACT, VERTICALITY",She stood up to catch the ball,7,4,
+"as if in dread of being attacked, restless and keen",FORCE,"CONTAINMENT, FORCE, OBJECT","The animal is alert and vigilant, ready to flee from predators",4,2,
+his extended love was unequal to the power of what was dragging her down,FORCE,"FORCE, VERTICALITY, SCALE, LINK",The rope was too short to reach the bottom of the well,3,1,
+"it does pull me in, it pulls me back in at certain points, and when I’m pulled in I can’t really pay as much attention to what’s happening.",FORCE,"FORCE, SOURCE_PATH_GOAL, CONTAINMENT, CENTER-PERIPHERY","The magnet attracts the metal object, it attracts it again at certain points, and when the metal is attracted, it's difficult to observe other objects around it.",5,7,
+I was so wrapped up in the movie I forgot to pause on the man itself.,FORCE,"CONTAINMENT, COVERING, FORCE, OBJECT",The package was so tightly wrapped in paper I forgot to look at the label itself.,4,2,
+and I get caught up in it.,FORCE,"CONTAINMENT, FORCE, LINK",The fish gets caught in the net.,7,5,original annotation?
+He is unbalanced.,FORCE,"VERTICALITY, SCALE, FORCE",The scale is unbalanced.,3,1,
+She’s not on an even keel.,FORCE,"SUPPORT, SCALE, VERTICALITY",The boat is not balanced on the water.,6,3,original annotation?
+I’m a very stable individual.,FORCE,"SUPPORT, VERTICALITY, OBJECT",The building has a very stable foundation.,7,3,
+She’s quite level-headed,FORCE,"SCALE, VERTICALITY, OBJECT",The shelf is quite level,3,2,
+On the other hand. . .,FORCE,"PART-WHOLE, OBJECT, VERTICALITY",On the other side of the body. . .,6,2,
+This is a substantial problem for us.,FORCE,"SUBSTANCE, OBJECT, FORCE",This is a large rock blocking our path.,7,3,original annotation?
+"Before we draw any conclusions, we must weigh both sides of the issue.",FORCE,"SCALE, OBJECT, CONTAINMENT, PART-WHOLE","Before we place items in the basket, we must measure both halves of the object.",3,1,
+He weighed the ideas in his mind.,FORCE,"SCALE, CONTAINMENT, OBJECT, SUBSTANCE",He measured the objects on the scale.,3,1,
+"Before we draw any conclusions, we must weigh both sides of the issue.",FORCE,"SCALE, OBJECT, CONTAINMENT, PART-WHOLE","Before we place items in the basket, we must measure both halves of the object.",3,1,
+Let’s try to get around this problem.,FORCE,"SOURCE_PATH_GOAL, CONTAINMENT, OBJECT",Let's try to walk around this building.,7,1,original annotation?
+She’s trying to get around the regulations.,FORCE,"SOURCE_PATH_GOAL, CONTAINMENT, OBJECT",She's trying to walk around the building.,7,1,original annotation?
+He went through the trial.,FORCE,"SOURCE_PATH_GOAL, CONTAINMENT, FORCE",He walked through the tunnel.,7,2,
+We’ve got him boxed into a corner.,FORCE,"CONTAINMENT, FORCE, SOURCE_PATH_GOAL, OBJECT",The toy is placed in a box in the corner of the room.,2,1,
+We are at an impasse.,FORCE,"CONTAINMENT, SOURCE_PATH_GOAL, FORCE",We are at a blocked road.,7,3,original annotation?
+I can't find my way around that.,FORCE,"SOURCE_PATH_GOAL, CONTAINMENT, OBJECT",I can't find the correct path around the obstacle.,7,1,original annotation?
+"The way of the lazy is overgrown with thorns, but the path of the upright is a level highway.",FORCE,"SOURCE_PATH_GOAL, VERTICALITY, FORCE, OBJECT, SCALE","The untended garden path is covered with weeds, while the maintained road is smooth and flat.",4,1,
+"Thorns and snares are in the way of the perverse, the cautious will keep far from them.",FORCE,"SOURCE_PATH_GOAL, OBJECT, CONTAINMENT, FORCE","Obstacles and traps are on the path, careful travelers will avoid them.",3,1,
+I am drowning in work.,FORCE,"CONTAINMENT, SUBSTANCE, FORCE, VERTICALITY",I am submerged in water.,7,1,
+We’ve accelerated the building of the new bridge.,FORCE,"FORCE, SOURCE_PATH_GOAL, OBJECT",We've increased the speed of constructing the new bridge.,5,7,
+Government transparency enables the public to hold the government accountable for how they spend their money.,COVERING,"CONTAINMENT, FORCE, LINK, OBJECT, SUBSTANCE",The glass window allows people to see inside the building and observe how workers handle the cash.,4,4,still metaphoric covering?
+Beijing has encouraged regional authorities to introduce sunshine policies that tackle corruption through increased transparency.,COVERING,"COVERING, FORCE, OBJECT, SUBSTANCE",The government has instructed local officials to implement clear rules that address misconduct through open reporting.,4,4,still metaphoric covering?
+Ecologists Shed New Light On Effects of Light Pollution On Wildlife,COVERING,"COVERING, SOURCE_PATH_GOAL, FORCE, SUBSTANCE",Researchers provide new information about the impact of excessive artificial lighting on animals,2,2,
+Can you get out of doing the dishes?,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, FORCE",Can you exit the kitchen where the dishes are?,5,7,
+"Try to get out of those committments, don’t let your boss box you in.",CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, FORCE","Try to exit the room, don't let the walls enclose you.",5,7,
+He did it in three minutes.,CONTAINMENT,"CONTAINMENT, SCALE",The fish swam across the pool in three minutes.,4,6,containment still metaphoric
+He’s like something out of the last century.,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, OBJECT",The antique vase is from the previous century.,3,1,
+He was putting on an act to impress an empty-headed girl.,CONTAINMENT,"COVERING, CONTAINMENT, OBJECT",He was putting on a coat to protect himself from the cold.,3,3,
+How stupid and bigoted and narrowminded he had become.,CONTAINMENT,"CONTAINMENT, SCALE, SOURCE_PATH_GOAL",How small and confined the room had become.,4,6,
+She couldn’t get the fear out of her eyes.,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, FORCE, OBJECT",She couldn't remove the dust from her eyes.,3,2,
+Love showed in his eyes.,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, SUBSTANCE",Light shone from his eyes.,3,3,
+The ship is coming into view.,CONTAINMENT,"SOURCE_PATH_GOAL, CONTAINMENT, OBJECT",The ship is approaching the harbor.,3,3,
+I have him in sight.,CONTAINMENT,"CONTAINMENT, OBJECT, SCALE",I see him within my field of vision.,5,7,
+I can’t see him – the tree is in the way.,CONTAINMENT,"COVERING, OBJECT, SOURCE_PATH_GOAL",I can't see the building – the billboard is blocking the view.,2,1,
+He’s out of sight now.,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, SCALE",He's beyond the visible range now.,2,1,
+I can’t get all of the ships in sight at once.,CONTAINMENT,"CONTAINMENT, SCALE, OBJECT, CENTER-PERIPHERY",I can't fit all of the books on the shelf at once.,5,5,
+The island is now in full view.,CONTAINMENT,"CONTAINMENT, SCALE, OBJECT",The mountain is now visible from this distance.,4,2,
+She let out a bitter cry.,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, SUBSTANCE",She released a loud sound.,3,7,
+"The astounded Reichert could only blurt out, “where have you come from?”",CONTAINMENT,"SOURCE_PATH_GOAL, CONTAINMENT","The surprised person asked, ""what is your starting location?""",3,1,
+This allowed children to live out their natural interests.,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, FORCE",This enabled plants to grow according to their genetic traits.,3,1,
+Children act out their frustration in temper tantrums.,CONTAINMENT,"CONTAINMENT, FORCE, SOURCE_PATH_GOAL",People express their anger through physical actions.,3,1,
+When cornered they lashed out with savage kicks.,CONTAINMENT,"CONTAINMENT, FORCE, SOURCE_PATH_GOAL, CONTACT","When trapped in a corner, they kicked forcefully outward.",4,4,
+Such expectations are drummed into every growing child.,CONTAINMENT,"CONTAINMENT, FORCE, SOURCE_PATH_GOAL, SUBSTANCE",The rhythm is drummed into the drum.,5,7,
+The sketch was in the shape of a heart.,CONTAINMENT,"CONTAINMENT, OBJECT",The drawing was enclosed within a heart-shaped outline.,6,3,
+It was a block of chocolate in the form of a cable car.,CONTAINMENT,"OBJECT, SUBSTANCE, CONTAINMENT, LINK",It was a block of wood in the shape of a cube.,6,4,still metaphoric containment
+He’s in it up to his neck.,CONTAINMENT,"CONTAINMENT, SCALE, VERTICALITY",The water level reaches his neck.,3,3,
+He finally found the key to the problem.,CONTAINMENT,"OBJECT, CONTAINMENT, SOURCE_PATH_GOAL",He finally found the key to the locked door.,7,5,
+That’s a hard problem.,CONTAINMENT,"SUBSTANCE, FORCE, OBJECT",That's a solid rock.,7,1,containment?
+The problem has a buried solution.,CONTAINMENT,"CONTAINMENT, VERTICALITY, OBJECT",The treasure chest has a buried gold coin.,5,6,still metaphoric containment?
+Have you found out a solution?,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, OBJECT",Have you located the missing item?,4,1,
+I won’t tell you – you’ll have to find out for yourself!,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, OBJECT",The treasure is hidden – you'll have to search the area to locate it.,4,1,
+What did you gather from his statement?,CONTAINMENT,"CONTAINMENT, SOURCE_PATH_GOAL, OBJECT",What information did you collect from his document?,5,5,
+You can’t simply stuff ideas into a sentence any old way.,CONTAINMENT,"CONTAINMENT, FORCE, OBJECT, SUBSTANCE",You can't simply stuff clothes into a suitcase any old way.,4,7,
+The meaning is right there in the words.,CONTAINMENT,"CONTAINMENT, OBJECT, CENTER-PERIPHERY",The book is right there on the shelf.,6,2,
+You should form your words carefully.,CONTAINMENT,"OBJECT, SUBSTANCE, FORCE",You should shape the clay carefully.,7,1,
+This is a well-crafted sentence.,CONTAINMENT,"OBJECT, PART-WHOLE",This is a well-built chair.,7,1,
+Promises should be articulated clearly.,CONTAINMENT,"OBJECT, SUBSTANCE, SPLITTING",Words should be spoken distinctly.,4,1,
+That remark is completely impenetrable.,CONTAINMENT,"CONTAINMENT, FORCE, SUBSTANCE",That wall is completely impenetrable.,7,4,
+He writes sentences in such a way as to seal up the meaning in them.,CONTAINMENT,"CONTAINMENT, COVERING, OBJECT",He seals the contents in an airtight container.,4,7,
+Are tomatoes in the fruit or vegetable category?,CONTAINMENT,"CONTAINMENT, PART-WHOLE",Are tomatoes placed in the fruit or vegetable section of the grocery store?,4,7,
+It's a borderline case.,CONTAINMENT,"CONTAINMENT, SPLITTING",The fence marks the border between two properties.,6,1,
+Put on a happy face.,CONTAINMENT,"COVERING, OBJECT, VERTICALITY",Put on a mask.,7,5,
+Under cover of darkness.,CONTAINMENT,"COVERING, CONTAINMENT, SUBSTANCE",Under the blanket in the dark room.,7,5,
+Darkness closed in over us.,CONTAINMENT,"CONTAINMENT, COVERING, FORCE, SOURCE_PATH_GOAL",The blanket covered us completely.,7,5,
+She only has surface charm.,CONTAINMENT,"COVERING, SUBSTANCE, CONTAINMENT",The table only has a surface coating.,7,5,
+They had a falling out.,CONTAINMENT,"SOURCE_PATH_GOAL, VERTICALITY, SPLITTING",The apple fell from the tree and split open.,3,3,
+Let’s strip away all the unimportant details.,CENTER-PERIPHERY,"COVERING, SUBSTANCE, CONTAINMENT, SPLITTING",Let's remove the outer layer of paint from the wall.,4,7,
+Put aside for a moment the fact that the man has been in prison.,CENTER-PERIPHERY,"CONTAINMENT, SOURCE_PATH_GOAL, OBJECT",Move the book to the side of the desk for a moment.,5,7,
+"The Muslim tradition spoke to her again at a time of distress in her life, after the death of her mother.‘I was in the midst of a personal crisis, along with my mom’s death,<...>.’",CENTER-PERIPHERY,"CONTAINMENT, FORCE, SOURCE_PATH_GOAL, LINK","The person found comfort in religious practices during a difficult period following her mother's passing. 'I was experiencing personal challenges while also dealing with my mother's death,<...>.'",4,7,
+Emigration has threatened to unravel the fabric of this small society.,CENTER-PERIPHERY,"SPLITTING, PART-WHOLE, SUBSTANCE, FORCE",The thread has started to unravel the fabric of this small garment.,7,1,
+The addition brought my house closer to what I had in mind.,CENTER-PERIPHERY,"SOURCE_PATH_GOAL, OBJECT, CONTAINMENT",The extension moved the building nearer to the planned design.,5,7,
+It is close on midnight.,CENTER-PERIPHERY,"SOURCE_PATH_GOAL, SCALE, CONTACT",The clock hand is near the twelve o'clock position.,7,5,
+To answer that question we need to go further back in time.,CENTER-PERIPHERY,"SOURCE_PATH_GOAL, SCALE, FORCE",To reach that location we need to walk further back on the path.,7,4,
+He became emotionally distant from his friends and family after the illness.,CENTER-PERIPHERY,"SOURCE_PATH_GOAL, SCALE, LINK, CENTER-PERIPHERY",He moved physically far away from his friends and family after relocating.,7,5,
+My symptoms went away.,CENTER-PERIPHERY,"SOURCE_PATH_GOAL, FORCE, OBJECT",The birds flew away from the tree.,7,5,
+House Democrats and Republicans moved closer to agreeing on a budget today.,CENTER-PERIPHERY,"SOURCE_PATH_GOAL, CONTACT, LINK, FORCE",The two groups of people walked towards each other in the room.,7,5,
+It is unclear how the new law applies to this situation.,CENTER-PERIPHERY,"CONTACT, FORCE, CONTAINMENT",The paint is unclear how it covers this surface.,6,4,
+total annotation,741,"0,3605839416",,,,
+,,59/212= 27%,63% of low cases are wrong annotations from LLMs (153),,,
+,,,how many times do we agree with it? (segno in arancione quelli in cui la valutazione di M2L è positiva (>=4) ma la valutazione di OA è negativa (<=3),,,
+,,,"60/212 (total); 53/153, 1 third of the times the LLM disagree with the human annotation, we rate high the newly generated sentence but low the appropriateness of the newly generated sentence wrt the human annotated sentences, indicating we disagree with the human annotation",,,
